@@ -7,7 +7,9 @@
     --textBoja: #BD5A42;
     --dugmeBoja:#FFE6D8;
 }
-
+.resize-none{
+    resize: none;
+}
 .carousel .carousel-indicators li {
     background-color: var(--textBoja);
 }
@@ -27,6 +29,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #fff;
 }
 .flex{
     display: flex;
@@ -191,6 +194,9 @@ form-floating{
     .form{
         display: block;
     }
+    .location-row{
+        flex-direction: column-reverse;
+    }
 }
 @media(max-width:580px){
     .carousel-item{
@@ -227,4 +233,5 @@ form-floating{
     .flex-xs-column{
         flex-direction: column;
     }
+    
 }
