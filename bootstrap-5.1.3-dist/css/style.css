@@ -98,6 +98,7 @@ border: 1px solid var(--textBoja) !important;
     height: 350px;
     
 }
+
 .flex-block{
     display: flex;
     justify-content: center;
@@ -121,9 +122,7 @@ border: 1px solid var(--textBoja) !important;
 a.nav-link{
     color: #000;
 }
-.max-height{
-    height: 400px;
-}
+
 p{
     color: #000;
 }
