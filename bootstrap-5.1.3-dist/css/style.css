@@ -285,4 +285,11 @@ form-floating{
     .font-xs-size{
         font-size: 15px ;
         }
+        .mapouter .gmap_canvas{
+            width: 300px;
+            height: 300px;
+           margin: auto; 
+           
+        }
+        
 }
