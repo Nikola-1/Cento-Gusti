@@ -10,6 +10,43 @@
 .resize-none{
     resize: none;
 }
+.bg-brown{
+    background-color: #BD5A42;
+}
+.border-brown-1{
+border: 1px solid var(--textBoja) !important;
+}
+    nav ul li:hover{
+        color: var(--textBoja) !important;
+    }
+.center-text{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.img-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+.img-container img{
+    width: 300px;
+    height: 200px;
+    border: 3px solid var(--textBoja);
+    margin: 10px;
+}
+.bg-gradient-img{
+    background-image: url(/assets/img/rendered2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.border-brown{
+    border: 5px solid var(--textBoja);
+}
 .carousel .carousel-indicators li {
     background-color: var(--textBoja);
 }
@@ -84,6 +121,9 @@
 a.nav-link{
     color: #000;
 }
+.max-height{
+    height: 400px;
+}
 p{
     color: #000;
 }
@@ -123,7 +163,7 @@ p{
     font-size: 88px;
     
 }
-h2{
+h2,h3{
     font-family: 'Libre Baskerville', serif;
 }
 hr{
@@ -169,6 +209,12 @@ form-floating{
     width: 100%;
     resize: none;
 }
+@media (max-width:1920px){
+    
+    .font-xl-size{
+        font-size: 50px ;
+        }
+}
 @media (max-width:1420px){
     
     .carousel-item{
@@ -177,6 +223,7 @@ form-floating{
     .recomend-carousel{
         height: 40em;
     }
+    
 
 }
 @media(max-width:920px){
@@ -197,6 +244,9 @@ form-floating{
     .location-row{
         flex-direction: column-reverse;
     }
+    .font-md-size{
+        font-size: 30px ;
+        }
 }
 @media(max-width:580px){
     .carousel-item{
@@ -233,5 +283,7 @@ form-floating{
     .flex-xs-column{
         flex-direction: column;
     }
-    
+    .font-xs-size{
+        font-size: 15px ;
+        }
 }
