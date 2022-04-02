@@ -84,7 +84,7 @@
       </div>
       
     </div>
-    <div class="col-12 col-lg-8 m-auto">
+    <div class="col-12 col-lg-8 m-auto d-flex justify-content-center flex-column justify-content-center">
     <form id="MyForm" name="Rezervacija form" method="post" action="rezervacije.php" class="row p-5">
      
       <div class="form-floating mb-3 ">
@@ -104,8 +104,27 @@
         <textarea class="form-control mb-3 resize-none" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
         <label for="floatingTextarea2">Detaljnije</label>
       </div>
-      <a href="#" class="btn btn-lg dugmeBoja w-50   m-auto">Posalji</a>
       </form>
+      <button class="btn btn-lg dugmeBoja w-50 m-auto " data-bs-toggle="modal" data-bs-target="#KontaktModal">Posalji</button>
+    <div class="modal fade" id="KontaktModal" tabindex="-1" role="dialog" aria-labelledby="PitanjeModal" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Uspešno slanje poruke</h5>
+            <button type="button" class="close btn-close" data-bs-dismiss="modal" aria-label="Close">
+              
+            </button>
+          </div>
+          <div class="modal-body">
+            Uspešno ste poslali poruku,ubrzo ćemo vam odgovoriti!
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Zatvori</button>
+            <button type="button" class="btn dugmeBoja" data-bs-dismiss="modal">U redu</button>
+          </div>
+        </div>
+      </div>
+    </div>
     </div>
     <div class="container-fluid  bg-brown col-12 mt-3">
   
