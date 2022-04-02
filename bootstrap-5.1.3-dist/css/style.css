@@ -18,6 +18,10 @@ border: 1px solid var(--textBoja) !important;
 }
     nav ul li:hover{
         color: var(--textBoja) !important;
+        
+    }
+    .nav{
+        flex-wrap: nowrap !important;
     }
 .center-text{
     position: absolute;
@@ -188,6 +192,11 @@ hr{
     font-family: 'Abril Fatface', cursive;
     color: #fff;
 }
+a{
+    text-decoration: none !important;
+    color: #fff !important;
+}
+
 .text-box-1{
     position: relative;
     bottom: 0;
@@ -246,11 +255,16 @@ form-floating{
     .font-md-size{
         font-size: 30px ;
         }
+        .col-12-lg-7 h2{
+            font-size: 60px;
+        }
 }
 @media(max-width:580px){
     .carousel-item{
         height:15rem ;
     }
+    
+    
     *{
         font-size: 12px;
     }
@@ -286,10 +300,12 @@ form-floating{
         font-size: 15px ;
         }
         .mapouter .gmap_canvas{
-            width: 300px;
-            height: 300px;
+           
            margin: auto; 
            
+        }
+        .col-12-lg-7 h2{
+            font-size: 40px;
         }
         
 }
