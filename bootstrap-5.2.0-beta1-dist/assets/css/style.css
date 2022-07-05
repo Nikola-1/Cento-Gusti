@@ -1,0 +1,137 @@
+.text-boja{
+    color: #F55361 !important;
+}
+@font-face {
+    font-family: 'Linotte';
+    src: url("/bootstrap-5.2.0-beta1-dist/assets/fonts/Linotte.New.Rounded.Sans.Family.5xOTF/Linotte\ -\ New\ Rounded\ Sans\ Family\ 5xOTF\ $98/Linotte regular.woff");
+   
+}
+@font-face {
+    font-family: 'Linotte-bold';
+    src: url("/bootstrap-5.2.0-beta1-dist/assets/fonts/Linotte.New.Rounded.Sans.Family.5xOTF/Linotte\ -\ New\ Rounded\ Sans\ Family\ 5xOTF\ $98/Linotte Bold.woff");
+   
+}
+.logo{
+   font-family: Linotte-bold;
+   color: #D02F45;
+}
+
+ul li{
+    margin: 20px;
+    
+}
+ul li a{
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+}
+ul li a:hover{
+    color: #D02F45;
+}
+.crven-tekst{
+    color: #D02F45;
+    font-family: Linotte;
+    font-weight: bold;
+}
+.naslovna_slika{
+    height: 400px;
+    width: 400px;
+}
+@media (max-width:767px){
+   .naslovna_slika{
+    width: 250px;
+   }
+}
+@media (max-width:420px){
+    .naslovna_slika{
+     width: 170px;
+    }
+ }
+ @media (max-width:320px){
+    .naslovna_slika{
+     width: 120px;
+    }
+ }
+.paragraf_naslov{
+    font-size: 22px;
+}
+h2{
+    font-family: 'DM Sans';
+}
+.section1 h2{
+    font-family: 'DM Sans';
+    font-size: 50px;
+
+}
+.border-red-bottom{
+    border-bottom:3px solid #D02F45 ;
+}
+.dugme {
+    padding: 10px;
+    text-align: center;
+    border: none;
+    background-color: #F55361 ;
+    color: #fff;
+    border-radius: 10px;
+    border: 3px solid #F55361;
+}
+.dugme:hover{
+    color: #F55361;
+    background: #fff;
+    border: 3px solid #F55361;
+    transition: .3s;
+}
+.popust{
+    background-color: #F55361;
+    width: 100%;
+    height: fit-content;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 10px;
+    color: #fff;
+    font-size: 20px;
+}
+.article{
+    width: 25%;
+    margin: 5%;
+    height: fit-content;
+    background-color: #D02F45;
+    text-align: center;
+    padding: 20px;
+    font-family: 'Dm sans';
+}
+.img-block1 img{
+    height: 100px;
+    width: 100px;
+}
+.linija{
+    height: 3px;
+    color: #fff;
+}
+.naslov-block hr{
+    color:#F55361 !important;
+    border: 3px solid #F55361 !important;
+    opacity: 100 !important;
+    width: 30%;
+    margin:  auto !important;
+    border-radius: 3px;
+}
+.article hr{
+    border: 2px solid #fff !important;
+    opacity: 100 !important;
+    border-radius: 3px;
+}
+.card{
+    width: 250px;
+}
+.card img{
+    width: 250px;
+    height: 250px;
+    border-radius: 20px 20px 0 0;
+    outline: none;
+    border: none;
+}
+.card-bottom{
+    border-radius: 0 0 20px 20px;
+}
