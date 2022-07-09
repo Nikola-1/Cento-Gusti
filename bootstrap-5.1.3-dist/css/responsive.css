@@ -1,0 +1,72 @@
+
+@media (max-width:1920px){
+    #carouselExampleControls{
+        width: 100%;
+    }
+    
+}
+
+@media (min-width:991px){
+    .w-lg-75{
+        width: 75% !important;
+    }
+    .w-lg-50{
+        width: 50% !important;
+    }
+    .border-bottom-nav{
+        border-bottom: 3px solid #D02F45;
+    opacity: 100;
+    }
+    
+}
+@media (max-width:991px){
+    
+}
+
+@media (max-width:860px){
+   
+    .mapa{
+        width: 100% !important;
+        height: 400px !important;   
+        position: relative; 
+    }
+    .mapouter{
+        width:100% !important;
+    }
+}
+@media (max-width:767px){
+   .naslovna_slika{
+    width: 250px;
+   }
+   .border-bottom-color{
+    border-bottom: 3px solid #D02F45;
+    opacity: 100;
+}
+.paragraph p{
+    font-size: 18px;
+}
+.nav-list{
+    width: 100%;
+}
+.nav-wrapp{
+    width: 100%;
+}
+}
+@media (max-width:420px){
+    .naslovna_slika{
+     width: 170px;
+    }
+    .mapa{
+        width: 50% !important;
+        height: 400px !important;    
+    }
+ }
+ @media (max-width:320px){
+    .naslovna_slika{
+     width: 120px;
+    }
+    .carousel_btn{
+        margin:auto;
+    }
+}
+ 

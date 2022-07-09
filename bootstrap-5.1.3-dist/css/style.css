@@ -1,1 +1,218 @@
-*{margin:0;padding:0;box-sizing:border-box}:root{--textBoja:#BD5A42;--dugmeBoja:#FFE6D8}.resize-none{resize:none}.shadow-box{box-shadow:0 0 1px #000}.bg-brown{background-color:#bd5a42!important}.border-brown-1{border:1px solid var(--textBoja)!important}.nav-item a:hover{color:var(--textBoja)!important}.nav{flex-wrap:nowrap!important}.center-text{position:absolute;top:0;left:0;right:0;bottom:0}.img-container{display:flex;align-items:center;justify-content:center;margin:auto}.img-container img{width:300px;height:200px;border:3px solid var(--textBoja);margin:10px}.border-brown{border:5px solid var(--textBoja)}.carousel .carousel-indicators li{background-color:var(--textBoja)}.dugmeBoja{background-color:var(--dugmeBoja)!important;color:var(--textBoja)!important}.h2boja{color:var(--textBoja)!important}.carousel-control-next-icon{background-color:var(--textBoja)!important}.section-height-white{height:fit-content;width:100%;display:flex;justify-content:center;align-items:center;background-color:#fff}.flex{display:flex;justify-content:center;align-items:center}.section-height{height:fit-content;width:100%;background-color:var(--textBoja)!important;display:flex;justify-content:center;align-items:center}.section-height-2{height:fit-content;width:100%;text-align:center;background-image:url("../assets/img/bg-lasagna.jpg");background-position:center;background-size:cover;background-repeat:no-repeat}.section-height-2 .container{font-family:'Libre Baskerville',serif}.img-size{width:450px;height:350px}.flex-block{display:flex;justify-content:center;align-items:center}.flex-img{display:block;text-align:center;padding:20px}.flex-img img{border:10px solid #fff}.logo{width:250px;height:200px}a.nav-link{color:#000}p{color:#000}.text-boja{color:var(--textBoja)!important}.carousel-item{height:40rem;background:#777;color:#fff;position:relative}.text-box{position:absolute;bottom:0;left:0;right:0;padding-bottom:50px}.overlay-image{position:absolute;bottom:0;left:0;right:0;top:0;background-position:center;background-size:cover;background-repeat:no-repeat;opacity:.5;height:auto}.col-12-lg-7{margin:20px}.col-12-lg-7 h2{font-size:88px}h2,h3,h4,h5{font-family:'Libre Baskerville',serif}hr{width:50%;opacity:1!important;margin:auto!important;color:var(--textBoja)!important}.prostor{padding:20px}.slider-img{width:400px;height:500px;margin:40px}.location-text{text-align:start;color:#fff;font-family:'Libre Baskerville',serif}.location-text p{font-family:'Libre Baskerville',serif;color:#fff}a{text-decoration:none!important;color:#fff!important}.text-box-1{position:relative;bottom:0;left:0;right:0;padding-bottom:50px;width:400px}.slider-flex{display:flex;justify-content:center;align-items:center}form-floating{margin-right:30px!important}.text-area{width:100%;resize:none}@media (max-width:1920px){.font-xl-size{font-size:50px}.uvod-text{width:40%;margin:auto}}@media (max-width:1420px){.carousel-item{height:30rem}.recomend-carousel{height:40em}.uvod-text{width:50%;margin:auto}}@media(max-width:920px){.carousel-item{height:20rem}.recomend-carousel{height:fit-content;align-items:center}.recomend-container{display:flex;flex-direction:column}.form{display:block}.location-row{flex-direction:column-reverse}.font-md-size{font-size:30px}.col-12-lg-7 h2{font-size:60px}.uvod-text{width:70%;margin:auto}}@media(max-width:580px){.carousel-item{height:15rem}*{font-size:12px}.recomend-carousel{height:fit-content;align-items:center}.recomend-container{display:flex;flex-direction:column}.recomend-container img{height:300px;width:200px}.polaroid-img{display:flex;flex-direction:column;align-items:center}.polaroid-img img{width:200px;height:200px}.form-colum{flex-direction:column!important}.flex-xs-column{flex-direction:column}.font-xs-size{font-size:15px}.mapouter .gmap_canvas{margin:auto}.col-12-lg-7 h2{font-size:40px}.uvod-text{width:80%;margin:auto}}
+.text-boja{
+    color: #F55361 !important;
+}
+@font-face {
+    font-family: 'Linotte';
+    src: url("/bootstrap-5.1.3-dist/assets/fonts/Linotte.New.Rounded.Sans.Family.5xOTF/Linotte\ -\ New\ Rounded\ Sans\ Family\ 5xOTF\ $98/Linotte regular.woff");
+   
+}
+@font-face {
+    font-family: 'Linotte-bold';
+    src: url("/bootstrap-5.1.3-dist/assets/fonts/Linotte.New.Rounded.Sans.Family.5xOTF/Linotte\ -\ New\ Rounded\ Sans\ Family\ 5xOTF\ $98/Linotte Bold.woff");
+   
+}
+.logo{
+   font-family: Linotte-bold;
+   color: #D02F45;
+}
+
+ul li{
+    margin: 20px;
+    
+}
+ul li a{
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+}
+ul li a:hover{
+    color: #D02F45;
+}
+.crven-tekst{
+    color: #D02F45;
+    font-family: Linotte;
+    font-weight: bold;
+}
+.naslovna_slika{
+    height: 400px;
+    width: 400px;
+}
+
+.paragraf_naslov{
+    font-size: 22px;
+}
+h2{
+    font-family: 'DM Sans';
+}
+.section1 h2{
+    font-family: 'DM Sans';
+    font-size: 50px;
+
+}
+.border-red-bottom{
+    border-bottom:3px solid #D02F45 ;
+}
+.dugme {
+    padding: 10px;
+    text-align: center;
+    border: none;
+    background-color: #F55361 ;
+    color: #fff;
+    border-radius: 10px;
+    border: 3px solid #F55361;
+}
+.dugme:hover{
+    color: #F55361;
+    background: #fff;
+    border: 3px solid #F55361;
+    transition: .3s;
+}
+.popust{
+    background-color: #F55361;
+    width: 100%;
+    height: fit-content;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 10px;
+    color: #fff;
+    font-size: 20px;
+}
+.article{
+    width: 25%;
+    margin: 5%;
+    height: fit-content;
+    background-color: #D02F45;
+    text-align: center;
+    padding: 20px;
+    font-family: 'Dm sans';
+}
+.img-block1 img{
+    height: 100px;
+    width: 100px;
+}
+.linija{
+    height: 3px;
+    color: #fff;
+}
+.naslov-block hr{
+    color:#F55361 !important;
+    border: 3px solid #F55361 !important;
+    opacity: 100 !important;
+    width: 30%;
+    margin:  auto !important;
+    border-radius: 3px;
+}
+.article hr{
+    border: 2px solid #fff !important;
+    opacity: 100 !important;
+    border-radius: 3px;
+}
+.card{
+    width: 250px;
+}
+.card-top{
+    border-radius: 20px 20px 0 0 !important;
+}
+.card img{
+    height: 250px;
+    width: 250px;
+    border-radius: 20px 20px 0 0;
+    outline: none;
+    border: none;
+}
+.card-bottom{
+    border-radius: 0 0 20px 20px !important;
+    outline: none !important;
+}
+.carousel_btn{
+    border-radius: 50%;
+    background-color: #fff;
+    color: #D02F45;
+    border: 3px solid #D02F45;
+}
+a{
+    color: #F55361 !important;
+    text-decoration: none !important;
+}
+.bg-color{
+    background-color: #D02F45 !important;
+    
+}
+.accordion-item p{
+    color: #fff;
+}
+.accordion-border{
+    border-right:2px  solid #D02F45 !important;
+    border-left:2px  solid #D02F45 !important;
+}
+.accordion-border-lst{
+    border-right:2px solid #D02F45 !important;
+    border-left:2px solid #D02F45 !important;
+    border-bottom:2px solid  #D02F45 !important;
+}
+.border1{
+    height: 2em;
+    background-color: #D02F45;
+}
+.footer-block{
+    background-image: url("/bootstrap-5.1.3-dist/assets/img/pozadina1.jpg");
+    background-size: cover;
+    height: fit-content;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+nav ul li a{
+    color: rgb(68, 66, 66) !important;
+}
+.footer-block hr{
+    color: #fff !important;
+    opacity: 100;
+    border: 1px solid #fff;
+}
+.ikonica{
+    font-size: 50px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    padding: 8px;
+}
+.margina{
+    margin: 5em !important;
+}
+
+.accordion-header p{
+    font-family: 'DM Sans';
+    font-size: 22px;
+}
+.naslov hr{
+    border: 3px solid #F55361;
+    opacity: 100;
+    width: 20%;
+    border-radius: 3px;
+}
+.naslov h2{
+    margin: 20px;
+    width: 120px;
+    align-items: center;
+}
+.decoration  img{
+    width: 50px;
+    height: 50px;
+}
+.paragraph p{
+    font-size: 26px;
+}
+
+.decoration hr{
+    border: 3px solid #F55361;
+    opacity: 100;
+    width: 20%;
+    
+    border-radius: 3px;
+}
+.info-block i {
+    padding: 50px;
+    border-radius: 50%;
+    font-size: 30px;
+}
