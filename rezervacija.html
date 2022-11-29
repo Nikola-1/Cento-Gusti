@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="rs">
+<head>
+    <meta name="Author" content="Nikola Đurić"/>
+    <meta name="description" content="Rezervišite na vreme,jer  restoran Cento Gusti uvek ima posetioce!"/>
+    <meta name="keywords" content="Restoran,Rezervacija,Cento Gusti"/>
+      <meta charset="UTF-8"/>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <link rel="stylesheet" href="bootstrap-5.1.3-dist/css/style.css">
+      <link rel="icon" type="image/x-icon" href="bootstrap-5.1.3-dist/assets/img/Icon.png">
+      <link rel="preconnect" href="https://fonts.googleapis.com"/>
+      <link rel="stylesheet" href="sitemap.xml"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Libre+Baskerville&display=swap" rel="stylesheet"/>
+      <title>Restoran "Cento Gusti"</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"/>
+      <script src="https://kit.fontawesome.com/511a7c625f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="w-100 bg-brown d-flex text-white">
+          <p class="pt-3 ps-5 text-white">Porudžbine / Orders: Novi Beograd 011-222-5467; 065-222-5467 / Vračar 064-054-0405; 065-454-0405</p>
+          <div class="ms-auto p-3">
+            <a href="https://www.facebook.com"><i class="fa-brands fa-facebook p-2"></i></a>
+            <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram p-2"></i></a>
+        </div>
+        </div>
+          <!--Nav bar-->
+          <nav class="navbar navbar-expand-md bg-white navbar-light">
+              <div class="col-12 ">
+                
+                <button class="navbar-toggler ms-5" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
+                  <span class="navbar-toggler-icon "></span>
+              </button>
+              <a href="index.html" class="d-flex justify-content-center align-items-center col-1 m-auto"  ><img src="bootstrap-5.1.3-dist/assets/img/Logo.png" alt="Logo restorana" class="logo"/></a>
+                  
+                  <div class="collapse navbar-collapse justify-content-end" id="navbar">
+                    
+                      <ul class="nav justify-content-center d-flex flex-column flex-md-row  align-items-center m-auto">
+                             
+                        <li class="nav-item ">
+                                <a class="nav-link active text-black" aria-current="page" href="index.html">Početna</a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link text-black" href="jelovnik.html">Jelovnik</a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link active text-black" aria-current="page" href="kontak.html">Kontakt</a>
+                              </li>
+                              
+                              <li class="nav-item  ">
+                               <a class="nav-link text-black" href="rezervacija.html">Rezervacija</a>
+                              </li>
+                              <li class="nav-item ">
+                                <a  class="nav-link active text-black" aria-current="page" href="galerija.html">Galerija</a>
+                              </li>
+                              
+                              <li class="nav-item ">
+                                <a class="nav-link active text-black" aria-current="page" href="https://nikola-1.github.io/portfolio2/">Autor</a>
+                              </li>
+                      </ul>
+                  
+              </div>
+          </div>
+          </nav>
+      </header>
+      <!--<div class="section-height-2 ">-->
+        <div class="container-fluid col-12 m-auto d-flex justify-content-center">
+          <hr>
+          <h2 class="p-3 m-2 text-center ">Rezervacija</h2>
+          <hr>
+      </div>
+        <div class="container-fluid w-75 py-3">
+          
+          <form id="MyForm" name="Rezervacija form" method="post" action="rezervacije.php" class="row"/>
+            <div class="form-floating mb-3 col-md-6 ">
+              <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"/>
+              <label for="floatingInput" class="ps-3">Ime</label>
+            </div>
+            <div class="form-floating mb-3 col-md-6">
+              <input type="password" class="form-control" id="floatingPassword" placeholder="Password"/>
+              <label for="floatingPassword" class="ps-3">Prezime</label>
+            </div>
+    
+            <div class="form-floating mb-3 col-md-6 ">
+              <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"/>
+              <label for="floatingInput" class="ps-3">Email</label>
+            </div>
+            <div class="form-floating mb-3 col-md-6">
+              <input type="password" class="form-control" id="floatingPassword" placeholder="Password"/>
+              <label for="floatingPassword" class="ps-3">Broj</label>
+            </div>
+            <div class="form-floating mb-3 col-md-6">
+              <input type="password" class="form-control" id="floatingPassword" placeholder="Password"/>
+              <label for="floatingPassword" class="ps-3">Datum <i class="fas fa-calendar-alt"></i></label>
+            </div>
+            <div class="form-floating mb-3 col-md-6">
+              <input type="password" class="form-control" id="floatingPassword" placeholder="Password"/>
+              <label for="floatingPassword" class="ps-3">Vreme <i class="fas fa-clock"></i></label>
+            </div>
+    
+            <div class="form-floating mb-3 col-md-6">
+              <input type="number" class="form-control" id="floatingPassword" placeholder="Password"/>
+              <label for="floatingPassword" class="ps-3">Broj gostiju</label>
+            </div>
+            <div class="form-floating mb-3 col-md-12">
+              <div class="form-floating">
+                <textarea class="form-control resize-none text-boja" id="floatingTextarea3" style="height: 100px" placeholder="Unesite tekst"></textarea>
+                <label for="floatingTextarea3">Detaljnije</label>
+              </div>
+            </div>
+          </form>
+          <button  class="btn btn-lg dugmeBoja w-100" data-bs-toggle="modal" data-bs-target="#rezervacijaModal">Pošalji</button>
+        </div>
+    
+        <div class="modal fade" id="rezervacijaModal" tabindex="-1" role="dialog" aria-labelledby="rezervacijaModal" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Uspešna rezervacija</h5>
+                <button type="button" class="close btn-close" data-bs-dismiss="modal" aria-label="Close">
+                  
+                </button>
+              </div>
+              <div class="modal-body">
+                Uspešno ste rezervisali vaš sto,hvala vam na poverenju!
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Zatvori</button>
+                <button type="button" class="btn dugmeBoja" data-bs-dismiss="modal">U redu</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      <!--</div>-->
+        <div class="container-fluid  bg-brown col-12 mt-3">
+            <Div class="row p-3 col-12  d-flex justify-content-center align-items-center">
+              <Div class="container-fluid col-lg-12 col-10 d-flex justify-content-center align-items-center">
+                <hr class="text-white">
+              <img src="bootstrap-5.1.3-dist/assets/img/Logo2.png" class="img-fluid w-25">
+              <hr class="text-white">
+              
+            </Div>
+            <Div class="d-flex justify-content-center flex-md-row flex-column align-items-center">
+            <a href="sitemap.xml" class="m-3">Sitemap</a>
+            <p class="text-white text-center m-3">© 2022 Cento Gusti. Sva prava zadržana. Dizajn i izrada Nikola Đurić 79/21</p>
+            
+            <a href="bootstrap-5.1.3-dist/css/style.css" class="m-3">CSS</a>
+            </Div>
+          </Div>
+            </div>
+            <script src="https://kit.fontawesome.com/511a7c625f.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+</body>
+</html>
