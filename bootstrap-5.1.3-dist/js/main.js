@@ -1,7 +1,7 @@
 
 var url = window.location.pathname;
 console.log(url);
-if(url == "/index.html" ||url == "/galerija.html" || url == "/rezervacija.html"|| url == "/Jelovnik.html" ){
+if(url == "/Cento-Gusti/index.html" ||url == "/galerija.html" || url == "/rezervacija.html"|| url == "/Jelovnik.html" ){
 var nizSadrzaj=new Array("Početna","Jelovnik","Kontakt","Rezervacija","Galerija","Autor");
 var NizLinkova= new Array("index.html","jelovnik.html","kontak.html","rezervacija.html","galerija.html","https://nikola-1.github.io/portfolio2/")
 var div= document.getElementById("Menu");
