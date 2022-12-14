@@ -1,1 +1,395 @@
-*{margin:0;padding:0;box-sizing:border-box}:root{--textBoja:#BD5A42;--dugmeBoja:#FFE6D8}.resize-none{resize:none}.shadow-box{box-shadow:0 0 1px #000}.bg-brown{background-color:#bd5a42!important}.border-brown-1{border:1px solid var(--textBoja)!important}.nav-item a:hover{color:var(--textBoja)!important}.nav{flex-wrap:nowrap!important}.center-text{position:absolute;top:0;left:0;right:0;bottom:0}.img-container{display:flex;align-items:center;justify-content:center;margin:auto}.img-container img{width:300px;height:200px;border:3px solid var(--textBoja);margin:10px}.border-brown{border:5px solid var(--textBoja)}.carousel .carousel-indicators li{background-color:var(--textBoja)}.dugmeBoja{background-color:var(--dugmeBoja)!important;color:var(--textBoja)!important}.h2boja{color:var(--textBoja)!important}.carousel-control-next-icon{background-color:var(--textBoja)!important}.section-height-white{height:fit-content;width:100%;display:flex;justify-content:center;align-items:center;background-color:#fff}.flex{display:flex;justify-content:center;align-items:center}.section-height{height:fit-content;width:100%;background-color:var(--textBoja)!important;display:flex;justify-content:center;align-items:center}.section-height-2{height:fit-content;width:100%;text-align:center;background-image:url("../assets/img/bg-lasagna.jpg");background-position:center;background-size:cover;background-repeat:no-repeat}.section-height-2 .container{font-family:'Libre Baskerville',serif}.img-size{width:450px;height:350px}.flex-block{display:flex;justify-content:center;align-items:center}.flex-img{display:block;text-align:center;padding:20px}.flex-img img{border:10px solid #fff}.logo{width:250px;height:200px}a.nav-link{color:#000}p{color:#000}.text-boja{color:var(--textBoja)!important}.carousel-item{height:40rem;background:#777;color:#fff;position:relative}.text-box{position:absolute;bottom:0;left:0;right:0;padding-bottom:50px}.overlay-image{position:absolute;bottom:0;left:0;right:0;top:0;background-position:center;background-size:cover;background-repeat:no-repeat;opacity:.5;height:auto}.col-12-lg-7{margin:20px}.col-12-lg-7 h2{font-size:88px}h2,h3,h4,h5{font-family:'Libre Baskerville',serif}hr{width:50%;opacity:1!important;margin:auto!important;color:var(--textBoja)!important}.prostor{padding:20px}.slider-img{width:400px;height:500px;margin:40px}.location-text{text-align:start;color:#fff;font-family:'Libre Baskerville',serif}.location-text p{font-family:'Libre Baskerville',serif;color:#fff}a{text-decoration:none!important;color:#fff!important}.text-box-1{position:relative;bottom:0;left:0;right:0;padding-bottom:50px;width:400px}.slider-flex{display:flex;justify-content:center;align-items:center}form-floating{margin-right:30px!important}.text-area{width:100%;resize:none}@media (max-width:1920px){.font-xl-size{font-size:50px}.uvod-text{width:40%;margin:auto}}@media (max-width:1420px){.carousel-item{height:30rem}.recomend-carousel{height:40em}.uvod-text{width:50%;margin:auto}}@media(max-width:920px){.carousel-item{height:20rem}.recomend-carousel{height:fit-content;align-items:center}.recomend-container{display:flex;flex-direction:column}.form{display:block}.location-row{flex-direction:column-reverse}.font-md-size{font-size:30px}.col-12-lg-7 h2{font-size:60px}.uvod-text{width:70%;margin:auto}}@media(max-width:580px){.carousel-item{height:15rem}*{font-size:12px}.recomend-carousel{height:fit-content;align-items:center}.recomend-container{display:flex;flex-direction:column}.recomend-container img{height:300px;width:200px}.polaroid-img{display:flex;flex-direction:column;align-items:center}.polaroid-img img{width:200px;height:200px}.form-colum{flex-direction:column!important}.flex-xs-column{flex-direction:column}.font-xs-size{font-size:15px}.mapouter .gmap_canvas{margin:auto}.col-12-lg-7 h2{font-size:40px}.uvod-text{width:80%;margin:auto}}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+:root {
+    --textBoja: #BD5A42;
+    --dugmeBoja: #FFE6D8
+}
+
+.resize-none {
+    resize: none
+}
+
+.shadow-box {
+    box-shadow: 0 0 1px #000
+}
+
+.bg-brown {
+    background-color: #bd5a42 !important
+}
+
+.border-brown-1 {
+    border: 1px solid var(--textBoja) !important
+}
+
+.nav-item a:hover {
+    color: var(--textBoja) !important
+}
+
+.nav {
+    flex-wrap: nowrap !important
+}
+
+.center-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0
+}
+
+.img-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto
+}
+
+.img-container img {
+    width: 300px;
+    height: 200px;
+    border: 3px solid var(--textBoja);
+    margin: 10px
+}
+
+.border-brown {
+    border: 5px solid var(--textBoja)
+}
+
+.carousel .carousel-indicators li {
+    background-color: var(--textBoja)
+}
+
+.dugmeBoja {
+    background-color: var(--dugmeBoja) !important;
+    color: var(--textBoja) !important
+}
+
+.h2boja {
+    color: var(--textBoja) !important
+}
+
+.carousel-control-next-icon {
+    background-color: var(--textBoja) !important
+}
+
+.section-height-white {
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.section-height {
+    height: fit-content;
+    width: 100%;
+    background-color: var(--textBoja) !important;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.section-height-2 {
+    height: fit-content;
+    width: 100%;
+    text-align: center;
+    background-image: url("../assets/img/bg-lasagna.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat
+}
+
+.izbrisi{
+    display: none;
+}
+.dodaj{
+    display: flex;
+}
+.section-height-2 .container {
+    font-family: 'Libre Baskerville', serif
+}
+
+.img-size {
+    width: 450px;
+    height: 350px
+}
+
+.flex-block {
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.flex-img {
+    display: block;
+    text-align: center;
+    padding: 20px
+}
+
+.flex-img img {
+    border: 10px solid #fff
+}
+
+.logo {
+    width: 250px;
+    height: 200px
+}
+
+a.nav-link {
+    color: #000
+}
+
+p {
+    color: #000
+}
+
+.text-boja {
+    color: var(--textBoja) !important
+}
+
+.carousel-item {
+    height: 40rem;
+    background: #777;
+    color: #fff;
+    position: relative
+}
+
+.text-box {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-bottom: 50px
+}
+
+.overlay-image {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: .5;
+    height: auto
+}
+
+.col-12-lg-7 {
+    margin: 20px
+}
+
+.col-12-lg-7 h2 {
+    font-size: 88px
+}
+
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'Libre Baskerville', serif
+}
+
+hr {
+    width: 50%;
+    opacity: 1 !important;
+    margin: auto !important;
+    color: var(--textBoja) !important
+}
+
+.prostor {
+    padding: 20px
+}
+
+.slider-img {
+    width: 400px;
+    height: 500px;
+    margin: 40px
+}
+
+.location-text {
+    text-align: start;
+    color: #fff;
+    font-family: 'Libre Baskerville', serif
+}
+
+.location-text p {
+    font-family: 'Libre Baskerville', serif;
+    color: #fff
+}
+
+a {
+    text-decoration: none !important;
+    color: #fff !important
+}
+
+.text-box-1 {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-bottom: 50px;
+    width: 400px
+}
+
+.slider-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+form-floating {
+    margin-right: 30px !important
+}
+
+.text-area {
+    width: 100%;
+    resize: none
+}
+.modal-container{
+    background-color: rgba(0,0,0,0.3);
+   
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    display: none;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    
+
+}
+.modal-container.show{
+    pointer-events: auto;
+    opacity: 2;
+    display: flex;
+    z-index: 2;
+}
+.modal1{
+    background-color: #fff;
+    width: 600px;
+    max-width: 100%;
+    text-align: center;
+}
+
+.modal h1{
+    margin: 0;
+}
+.modal p{
+    opacity: 0.7;
+}
+@media (max-width:1920px) {
+    .font-xl-size {
+        font-size: 50px
+    }
+    .uvod-text {
+        width: 40%;
+        margin: auto
+    }
+}
+
+@media (max-width:1420px) {
+    .carousel-item {
+        height: 30rem
+    }
+    .recomend-carousel {
+        height: 40em
+    }
+    .uvod-text {
+        width: 50%;
+        margin: auto
+    }
+}
+
+@media(max-width:920px) {
+    .carousel-item {
+        height: 20rem
+    }
+    .recomend-carousel {
+        height: fit-content;
+        align-items: center
+    }
+    .recomend-container {
+        display: flex;
+        flex-direction: column
+    }
+    .form {
+        display: block
+    }
+    .location-row {
+        flex-direction: column-reverse
+    }
+    .font-md-size {
+        font-size: 30px
+    }
+    .col-12-lg-7 h2 {
+        font-size: 60px
+    }
+    .uvod-text {
+        width: 70%;
+        margin: auto
+    }
+}
+
+@media(max-width:580px) {
+    .carousel-item {
+        height: 15rem
+    }
+    * {
+        font-size: 14px
+    }
+    .recomend-carousel {
+        height: fit-content;
+        align-items: center
+    }
+    .recomend-container {
+        display: flex;
+        flex-direction: column
+    }
+    .recomend-container img {
+        height: 300px;
+        width: 200px
+    }
+    .polaroid-img {
+        display: flex;
+        flex-direction: column;
+        align-items: center
+    }
+    .polaroid-img img {
+        width: 200px;
+        height: 200px
+    }
+    
+    .form-colum {
+        flex-direction: column !important
+    }
+    .flex-xs-column {
+        flex-direction: column
+    }
+    .font-xs-size {
+        font-size: 15px
+    }
+    .mapouter .gmap_canvas {
+        margin: auto
+    }
+    .col-12-lg-7 h2 {
+        font-size: 40px
+    }
+    .uvod-text {
+        width: 80%;
+        margin: auto
+    }
+}
