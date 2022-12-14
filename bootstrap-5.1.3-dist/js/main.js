@@ -1,7 +1,7 @@
 
 var url = window.location.pathname;
 console.log(url);
-if(url == "/Cento-Gusti/index.html" ||url == "/galerija.html" || url == "/rezervacija.html"|| url == "/Jelovnik.html" ){
+if(url == "/Cento-Gusti/index.html" ||url == "/Cento-Gusti/galerija.html" || url == "/Cento-Gusti/rezervacija.html"|| url == "/Cento-Gusti/Jelovnik.html" ){
 var nizSadrzaj=new Array("Početna","Jelovnik","Kontakt","Rezervacija","Galerija","Autor");
 var NizLinkova= new Array("index.html","jelovnik.html","kontak.html","rezervacija.html","galerija.html","https://nikola-1.github.io/portfolio2/")
 var div= document.getElementById("Menu");
@@ -33,7 +33,7 @@ for(var i=0; i <NizLinkova.length;i++){
 
 
 //Dinamicki napravljena galerija
-if(url == "/galerija.html"){
+if(url == "/Cento-Gusti/galerija.html"){
 var nizSlika =new Array("bootstrap-5.1.3-dist/assets/img/pexels-arthouse-studio-4344577.jpg","bootstrap-5.1.3-dist/assets/img/pexels-igor-starkov-914388.jpg","bootstrap-5.1.3-dist/assets/img/pexels-roman-odintsov-5902954.jpg","bootstrap-5.1.3-dist/assets/img/pexels-igor-starkov-1307698 (1).jpg","bootstrap-5.1.3-dist/assets/img/pexels-yelena-odintsova-10556713.jpg","bootstrap-5.1.3-dist/assets/img/pexels-volkan-vardar-6968828.jpg");
 var nizAlt = new Array("Unutrasnjošt restorana na zvezdari","Unutrašnjost restorana na vračaru","Pica na tanjiru ispred restorana","Unutrašnjost restorana na Dušanovcu","Spoljašnjost restorana na Novom Beogradu","Unutrašnjost restorana na novom Beogradu",);
 var Section1 =document.getElementById("section_1");
@@ -66,7 +66,7 @@ for(var i=4;i < 6;i++){
 
 
 
-if(url == "/index.html" || url == "/rezervacija.html"){
+if(url == "/Cento-Gusti/index.html" || url == "/Cento-Gusti/rezervacija.html"){
 
 
 
@@ -83,7 +83,7 @@ function proveriPrezime(){
     }
     
     
-    if(url =="/rezervacija.html"){
+    if(url =="/Cento-Gusti/rezervacija.html"){
     var Mesta =new Array("Vračar","Dušanovac","Zvezdara","Novi Beograd");
 var MestaValue=new Array("Vračar","Dušanovac","Zvezdara","Novi Beograd")
  
@@ -122,7 +122,7 @@ z.appendChild(selectTag);
 
 
     //Obrada
-if(url == "/index.html" || url =="/rezervacija.html"){
+if(url == "/Cento-Gusti/index.html" || url =="/Cento-Gusti/rezervacija.html"){
     document.querySelector("#buttonRegEx").addEventListener("click",provera);
     
     function provera(){
@@ -170,7 +170,7 @@ if(url == "/index.html" || url =="/rezervacija.html"){
         
     }
 
-    if(url== "/index.html" ){
+    if(url== "/Cento-Gusti/index.html" ){
     var poruka="<p class='text-white d-flex'>"
     }
     else{
@@ -186,7 +186,7 @@ if(url == "/index.html" || url =="/rezervacija.html"){
         document.querySelector("#ispis1").innerHTML="";
         nizPodaci.push(objIme.value);
     }
-if(url =="/rezervacija.html"){
+if(url =="/Cento-Gusti/rezervacija.html"){
     //Obrada drop liste
     if(ObjMestoValue =="0"){
         poruka +="Morate izabrati mesto."
@@ -246,7 +246,7 @@ if(url =="/rezervacija.html"){
         document.querySelector("#ispis3").innerHTML="";
         nizPodaci.push(objEmail.value);
     }
-    if(url =="/rezervacija.html"){
+    if(url =="/Cento-Gusti/rezervacija.html"){
     //Obrada telefona
 
     
@@ -348,7 +348,7 @@ if(url =="/rezervacija.html"){
         nizPodaci.push(objTekstualnoPolje.value);
     }
     //Obrada pola
-    if(url == "/index.html"){
+    if(url == "/Cento-Gusti/index.html"){
     var vrednostPol="";
     for(let i =0;i <objPol.length;i++){
         if(objPol[i].checked){
