@@ -70,18 +70,6 @@ for(var i=4;i < 6;i++){
 
 
 
-if(url == "/Cento-Gusti/index.html" || url == "/Cento-Gusti/rezervacija.html"){
-
-
-
-
-    
-
-
-    
-                
-    }
-    
     //Dinamicka drop down lista
     if(url =="/Cento-Gusti/rezervacija.html"){
     var Mesta =new Array("Vračar","Dušanovac","Zvezdara","Novi Beograd");
@@ -144,7 +132,7 @@ z.appendChild(selectTag);
 
 //Ispis 
 function proveraImena(){
-if(url== "/Cento-Gusti/index.html" ){
+if(url== "/index.html" ){
     var poruka="<p class='text-white d-flex'>"
     }
     else{
@@ -371,7 +359,7 @@ function ProveraTekstualnogPolja(){
 
 if(url == "/Cento-Gusti/index.html" || url =="/Cento-Gusti/rezervacija.html" ){
     document.querySelector("#floatingInputIme").addEventListener("blur",proveraImena);
-    if(url =="/rezervacija.html"){
+    if(url =="/Cento-Gusti/rezervacija.html"){
     document.querySelector("#DropLista").addEventListener("blur",ProveraMesta);
 }
     document.querySelector("#floatingInputPrezime").addEventListener("blur",ProveraPrezimena);
@@ -512,7 +500,7 @@ if(url =="/Cento-Gusti/rezervacija.html"){
         document.querySelector("#ispis3").innerHTML="";
         nizPodaci.push(objEmail.value);
     }
-    if(url =="/rezervacija.html"){
+    if(url =="/Cento-Gusti/rezervacija.html"){
     //Obrada telefona
 
     
