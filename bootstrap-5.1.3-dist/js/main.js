@@ -506,7 +506,7 @@ if(url =="/Cento-Gusti/rezervacija.html"){
     
             
             if(!RegExZaTelefon.test(objTelefon.value) && objTelefon.value !=""){
-                objTelefon.nextElementSibling.innerHTML = "Prvo slovo mora biti veliko";
+                objTelefon.nextElementSibling.innerHTML = "Broj telefona nije u ispravnom formatu.(063445511)";
                 nizGreske.push("telefon");
             }
             else{
