@@ -1,4 +1,32 @@
+window.onload = function(){
+    $(document).ready(function(){
+        $(".img-container:nth-child(1) ").animate({
+           opacity:"100%"
+                     
+           
+        },500);
+        $(".img-container:nth-child(2) ").delay(900).animate({
+            opacity:"100%"
+                      
+            
+         },500);
 
+         $(".img-container:nth-child(3) ").delay(1400).animate({
+            opacity:"100%"
+                      
+            
+         },3500);
+
+         
+         $(".prvi-slajd ").delay(500).animate({
+            opacity:"100%"
+                      
+            
+         },900);
+           
+     })
+     
+}
 var url = window.location.pathname;
 console.log(url);
 
@@ -9,7 +37,7 @@ console.log(url);
 
 
 //Dinamicki napravljena galerija
-if(url == "/galerija.html"){
+if(url == "/Cento-Gusti/galerija.html"){
 var nizSlika =new Array("bootstrap-5.1.3-dist/assets/img/pexels-arthouse-studio-4344577.jpg","bootstrap-5.1.3-dist/assets/img/pexels-igor-starkov-914388.jpg","bootstrap-5.1.3-dist/assets/img/pexels-roman-odintsov-5902954.jpg","bootstrap-5.1.3-dist/assets/img/pexels-igor-starkov-1307698 (1).jpg","bootstrap-5.1.3-dist/assets/img/pexels-yelena-odintsova-10556713.jpg","bootstrap-5.1.3-dist/assets/img/pexels-volkan-vardar-6968828.jpg");
 var nizAlt = new Array("Unutrasnjošt restorana na zvezdari","Unutrašnjost restorana na vračaru","Pica na tanjiru ispred restorana","Unutrašnjost restorana na Dušanovcu","Spoljašnjost restorana na Novom Beogradu","Unutrašnjost restorana na novom Beogradu",);
 var Section1 =document.getElementById("section_1");
@@ -42,7 +70,7 @@ for(var i=4;i < 6;i++){
 
 
 
-if(url == "/index.html" || url == "/rezervacija.html"){
+if(url == "/Cento-Gusti/index.html" || url == "/Cento-Gusti/rezervacija.html"){
 
 
 
@@ -55,7 +83,7 @@ if(url == "/index.html" || url == "/rezervacija.html"){
     }
     
     //Dinamicka drop down lista
-    if(url =="/rezervacija.html"){
+    if(url =="/Cento-Gusti/rezervacija.html"){
     var Mesta =new Array("Vračar","Dušanovac","Zvezdara","Novi Beograd");
 var MestaValue=new Array("Vračar","Dušanovac","Zvezdara","Novi Beograd")
  
@@ -98,13 +126,10 @@ z.appendChild(selectTag);
     var objDatum =document.getElementById("floatingInputDate");
     var objVreme=document.getElementById("floatingInputTime");
     var objGosti=document.getElementById("floatingInputGuests");
-    if(  url =="/rezervacija.html"){
-    var ObjMesto = document.querySelector("#DropLista");
-
-    var ObjMestoValue=ObjMesto.options[ObjMesto.selectedIndex].value;}
+    
     var nizGreske=[];
     var nizPodaci=[];
-       
+    
     //Regularni izrazi
     var RegExZaEmail=/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/
     var RegExZaIme=/^[A-ZŽĐŠČĆ]{1}[a-zžđščć]{2,12}$/
@@ -119,7 +144,7 @@ z.appendChild(selectTag);
 
 //Ispis 
 function proveraImena(){
-if(url== "/index.html" ){
+if(url== "/Cento-Gusti/index.html" ){
     var poruka="<p class='text-white d-flex'>"
     }
     else{
@@ -151,19 +176,22 @@ else{
 
 //Provera Mesta
 function ProveraMesta(){
+    var ObjMesto = document.querySelector("#DropLista");
+    var ObjMestoValue=ObjMesto.options[ObjMesto.selectedIndex].value;
+    var poruka="<p class='text-danger d-flex'>"
     if(url =="/rezervacija.html"){
         //Obrada drop liste
-        var poruka="<p class='text-danger d-flex'>"
+       
         if(ObjMestoValue =="0"){
             poruka +="Morate izabrati mesto.";
             
             document.querySelector("#ispis9").innerHTML=poruka;
             poruka=poruka.replace("Morate izabrati mesto.","");
             nizGreske.push("mesto");
-            console.log(ObjMestoValue);
+            
         }
         else{
-            console.log(ObjMestoValue);
+            
             document.querySelector("#ispis9").innerHTML="";
             nizPodaci.push(ObjMesto.options[ObjMesto.options.selectedIndex].text);
             
@@ -171,7 +199,13 @@ function ProveraMesta(){
     }
 }
 function ProveraPrezimena(){
-    var poruka="<p class='text-danger d-flex'>"
+    if(url== "/Cento-Gusti/index.html" ){
+        var poruka="<p class='text-white d-flex'>"
+        }
+        else{
+            var poruka ="<p class='text-danger d-flex'>"
+        }
+    
     if(!RegExZaPrezime.test(objPrezime.value) && objPrezime.value !=""){
         objPrezime.nextElementSibling.innerHTML = "Prvo slovo prezimena mora biti veliko";
         nizGreske.push("prezime");
@@ -195,7 +229,13 @@ function ProveraPrezimena(){
     }
 }
 function ProveraEmail(){
-    var poruka="<p class='text-danger d-flex'>"
+    
+    if(url== "/Cento-Gusti/index.html" ){
+        var poruka="<p class='text-white d-flex'>"
+        }
+        else{
+            var poruka ="<p class='text-danger d-flex'>"
+        }
     if(!RegExZaEmail.test(objEmail.value) && objEmail.value !=""){
         objEmail.nextElementSibling.innerHTML = "Email mora sadrzati @!(primer:pera@gmail.com)";
         nizGreske.push("Email");
@@ -209,11 +249,12 @@ function ProveraEmail(){
         poruka +="Morate uneti email u polje!";
         document.querySelector("#ispis3").innerHTML=poruka;
         poruka=poruka.replace("Morate uneti email u polje!","");
-        
+        nizGreske.push("email");
     }
     else{
         document.querySelector("#ispis3").innerHTML="";
         nizPodaci.push(objEmail.value);
+        
     }
 }
     function ProveraTelefona(){
@@ -310,7 +351,12 @@ function ProveraBrojaGostiju(){
 }
 
 function ProveraTekstualnogPolja(){
-    var poruka="<p class='text-danger d-flex'>"
+    if(url== "/Cento-Gusti/index.html" ){
+        var poruka="<p class='text-white d-flex'>"
+        }
+        else{
+            var poruka ="<p class='text-danger d-flex'>"
+        }
     if(objTekstualnoPolje.value==""){
         poruka +="Tekstualno polje ne moze da bude prazno.";
         document.querySelector("#ispis4").innerHTML=poruka;
@@ -323,17 +369,22 @@ function ProveraTekstualnogPolja(){
     }
 }
 
-if(url == "/index.html" || url =="/rezervacija.html" ){
+if(url == "/Cento-Gusti/index.html" || url =="/Cento-Gusti/rezervacija.html" ){
     document.querySelector("#floatingInputIme").addEventListener("blur",proveraImena);
+    if(url =="/rezervacija.html"){
     document.querySelector("#DropLista").addEventListener("blur",ProveraMesta);
+}
     document.querySelector("#floatingInputPrezime").addEventListener("blur",ProveraPrezimena);
     document.querySelector("#floatingInputEmail").addEventListener("blur",ProveraEmail);
+    if(url =="/rezervacija.html"){
     document.querySelector("#floatingInputNumber").addEventListener("blur",ProveraTelefona);
     document.querySelector("#floatingInputDate").addEventListener("blur",ProveraDatuma);
     document.querySelector("#floatingInputTime").addEventListener("blur",ProveraVremena);
     document.querySelector("#floatingInputGuests").addEventListener("blur",ProveraBrojaGostiju);
+}
     document.querySelector("#floatingTextarea3").addEventListener("blur",ProveraTekstualnogPolja);
     document.querySelector("#buttonRegEx").addEventListener("click",Provera);
+    document.querySelector("#buttonRegEx").addEventListener("click",modal);
       function Provera(){
         //Promenljive
         var objPol,objIme,objPrezime,objEmail,objTekstualnoPolje,objTelefon,objDatum,objVreme,objGosti,ObjMesto,nizGreske,nizPodaci
@@ -368,7 +419,7 @@ if(url == "/index.html" || url =="/rezervacija.html" ){
     
     
     //Obrada imena
-    if(url== "/index.html" ){
+    if(url== "/Cento-Gusti/index.html" ){
         var poruka="<p class='text-white d-flex'>"
         }
         else{
@@ -451,7 +502,7 @@ if(url =="/rezervacija.html"){
          
      }
     
-    if(objEmail.value==""){
+     if(objEmail.value==""){
         poruka +="Morate uneti email u polje!";
         document.querySelector("#ispis3").innerHTML=poruka;
         poruka=poruka.replace("Morate uneti email u polje!","");
@@ -565,7 +616,7 @@ if(url =="/rezervacija.html"){
         nizPodaci.push(objTekstualnoPolje.value);
     }
     //Obrada pola
-    if(url == "/index.html"){
+    if(url == "/Cento-Gusti/index.html"){
     var vrednostPol="";
     for(let i =0;i <objPol.length;i++){
         if(objPol[i].checked){
@@ -604,6 +655,7 @@ console.log(nizPodaci);
 
 
 }
+function modal(){
 if(nizPodaci.length == 9 && url =="/rezervacija.html" ){
     const open=document.getElementById("buttonRegEx");
 const modal_container=document.getElementById("modal_container");
@@ -618,5 +670,5 @@ close.addEventListener('click',() => {
 });
 }
     }
-
+}
 
