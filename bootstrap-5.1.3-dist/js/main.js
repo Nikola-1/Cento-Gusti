@@ -248,7 +248,7 @@ function ProveraEmail(){
     function ProveraTelefona(){
         var poruka="<p class='text-danger d-flex'>"
         if(!RegExZaTelefon.test(objTelefon.value) && objTelefon.value !=""){
-            objTelefon.nextElementSibling.innerHTML = "Prvo slovo mora biti veliko";
+            objTelefon.nextElementSibling.innerHTML = "Broj telefona nije u ispravnom formatu.(063445511)";
             nizGreske.push("telefon");
         }
         else{
