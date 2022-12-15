@@ -132,7 +132,7 @@ z.appendChild(selectTag);
 
 //Ispis 
 function proveraImena(){
-if(url== "/index.html" ){
+if(url== "/Cento-Gusti/index.html" ){
     var poruka="<p class='text-white d-flex'>"
     }
     else{
