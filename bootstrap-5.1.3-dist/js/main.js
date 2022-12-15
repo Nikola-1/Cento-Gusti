@@ -132,7 +132,7 @@ z.appendChild(selectTag);
 
 //Ispis 
 function proveraImena(){
-if(url== "/Cento-Gusti/index.html" ){
+if(url== "/Cento-Gusti/index.html" || url== "/Cento-Gusti/" ){
     var poruka="<p class='text-white d-flex'>"
     }
     else{
@@ -187,7 +187,7 @@ function ProveraMesta(){
     }
 }
 function ProveraPrezimena(){
-    if(url== "/Cento-Gusti/index.html" ){
+    if(url== "/Cento-Gusti/index.html" || url== "/Cento-Gusti/" ){
         var poruka="<p class='text-white d-flex'>"
         }
         else{
@@ -218,7 +218,7 @@ function ProveraPrezimena(){
 }
 function ProveraEmail(){
     
-    if(url== "/Cento-Gusti/index.html" ){
+    if(url== "/Cento-Gusti/index.html" || url== "/Cento-Gusti/" ){
         var poruka="<p class='text-white d-flex'>"
         }
         else{
@@ -339,7 +339,7 @@ function ProveraBrojaGostiju(){
 }
 
 function ProveraTekstualnogPolja(){
-    if(url== "/Cento-Gusti/index.html" ){
+    if(url== "/Cento-Gusti/index.html" || url== "/Cento-Gusti/" ){
         var poruka="<p class='text-white d-flex'>"
         }
         else{
@@ -357,7 +357,7 @@ function ProveraTekstualnogPolja(){
     }
 }
 
-if(url == "/Cento-Gusti/index.html" || url =="/Cento-Gusti/rezervacija.html" ){
+if(url == "/Cento-Gusti/index.html" || url =="/Cento-Gusti/rezervacija.html" || url== "/Cento-Gusti/" ){
     document.querySelector("#floatingInputIme").addEventListener("blur",proveraImena);
     if(url =="/Cento-Gusti/rezervacija.html"){
     document.querySelector("#DropLista").addEventListener("blur",ProveraMesta);
@@ -407,7 +407,7 @@ if(url == "/Cento-Gusti/index.html" || url =="/Cento-Gusti/rezervacija.html" ){
     
     
     //Obrada imena
-    if(url== "/Cento-Gusti/index.html" ){
+    if(url== "/Cento-Gusti/index.html" || url== "/Cento-Gusti/" ){
         var poruka="<p class='text-white d-flex'>"
         }
         else{
@@ -604,7 +604,7 @@ if(url =="/Cento-Gusti/rezervacija.html"){
         nizPodaci.push(objTekstualnoPolje.value);
     }
     //Obrada pola
-    if(url == "/Cento-Gusti/index.html"){
+    if(url == "/Cento-Gusti/index.html" || url== "/Cento-Gusti/"){
     var vrednostPol="";
     for(let i =0;i <objPol.length;i++){
         if(objPol[i].checked){
@@ -644,7 +644,7 @@ console.log(nizPodaci);
 
 }
 function modal(){
-if(nizPodaci.length = 9 && (url =="/Cento-Gusti/rezervacija.html" || url== "/Cento-Gusti/index.html")){
+if(nizPodaci.length = 9 && (url =="/Cento-Gusti/rezervacija.html" || url== "/Cento-Gusti/index.html" || url== "/Cento-Gusti/")){
     const open=document.getElementById("buttonRegEx");
 const modal_container=document.getElementById("modal_container");
 const close = document.getElementById("close");
