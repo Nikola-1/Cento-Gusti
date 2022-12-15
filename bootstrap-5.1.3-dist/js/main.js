@@ -140,7 +140,7 @@ if(url== "/Cento-Gusti/index.html" ){
     }
 
 if(!RegExZaIme.test(objIme.value) && objIme.value !=""){
-    objIme.nextElementSibling.innerHTML = "Prvo slovo mora biti veliko!";
+    objIme.nextElementSibling.innerHTML = "Telefon moze imati samo brojeve.Primer(063445511)";
     nizGreske.push("ime");
 }
 else{
@@ -364,7 +364,7 @@ if(url == "/Cento-Gusti/index.html" || url =="/Cento-Gusti/rezervacija.html" ){
 }
     document.querySelector("#floatingInputPrezime").addEventListener("blur",ProveraPrezimena);
     document.querySelector("#floatingInputEmail").addEventListener("blur",ProveraEmail);
-    if(url =="/rezervacija.html"){
+    if(url =="/Cento-Gusti/rezervacija.html"){
     document.querySelector("#floatingInputNumber").addEventListener("blur",ProveraTelefona);
     document.querySelector("#floatingInputDate").addEventListener("blur",ProveraDatuma);
     document.querySelector("#floatingInputTime").addEventListener("blur",ProveraVremena);
@@ -644,7 +644,7 @@ console.log(nizPodaci);
 
 }
 function modal(){
-if(nizPodaci.length = 9 && url =="/Cento-Gusti/rezervacija.html" ){
+if(nizPodaci.length = 9 && (url =="/Cento-Gusti/rezervacija.html" || url== "/Cento-Gusti/index.html")){
     const open=document.getElementById("buttonRegEx");
 const modal_container=document.getElementById("modal_container");
 const close = document.getElementById("close");
