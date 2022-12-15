@@ -179,7 +179,7 @@ function ProveraMesta(){
     var ObjMesto = document.querySelector("#DropLista");
     var ObjMestoValue=ObjMesto.options[ObjMesto.selectedIndex].value;
     var poruka="<p class='text-danger d-flex'>"
-    if(url =="/rezervacija.html"){
+    if(url =="/Cento-Gusti/rezervacija.html"){
         //Obrada drop liste
        
         if(ObjMestoValue =="0"){
@@ -398,7 +398,7 @@ if(url == "/Cento-Gusti/index.html" || url =="/Cento-Gusti/rezervacija.html" ){
     objDatum =document.getElementById("floatingInputDate");
     objVreme=document.getElementById("floatingInputTime");
     objGosti=document.getElementById("floatingInputGuests");
-    if(  url =="/rezervacija.html"){
+    if(  url =="/Cento-Gusti/rezervacija.html"){
     ObjMesto = document.querySelector("#DropLista");
     var ObjMestoValue=ObjMesto.options[ObjMesto.selectedIndex].value;}
     nizGreske=[];
@@ -448,7 +448,7 @@ if(url == "/Cento-Gusti/index.html" || url =="/Cento-Gusti/rezervacija.html" ){
         nizPodaci.push(objIme.value);
     }
     
-if(url =="/rezervacija.html"){
+if(url =="/Cento-Gusti/rezervacija.html"){
     //Obrada drop liste
     if(ObjMestoValue =="0"){
         poruka +="Morate izabrati mesto.";
