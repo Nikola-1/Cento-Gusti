@@ -656,7 +656,7 @@ console.log(nizPodaci);
 
 }
 function modal(){
-if(nizPodaci.length = 9 && url =="/rezervacija.html" ){
+if(nizPodaci.length = 9 && url =="/Cento-Gusti/rezervacija.html" ){
     const open=document.getElementById("buttonRegEx");
 const modal_container=document.getElementById("modal_container");
 const close = document.getElementById("close");
