@@ -140,7 +140,7 @@ if(url== "/Cento-Gusti/index.html" || url== "/Cento-Gusti/" ){
     }
 
 if(!RegExZaIme.test(objIme.value) && objIme.value !=""){
-    objIme.nextElementSibling.innerHTML = "Telefon moze imati samo brojeve.Primer(063445511)";
+    objIme.nextElementSibling.innerHTML = "Ime mora početi velikim slovom!";
     nizGreske.push("ime");
 }
 else{
@@ -225,7 +225,7 @@ function ProveraEmail(){
             var poruka ="<p class='text-danger d-flex'>"
         }
     if(!RegExZaEmail.test(objEmail.value) && objEmail.value !=""){
-        objEmail.nextElementSibling.innerHTML = "Email mora sadrzati @!(primer:pera@gmail.com)";
+        objEmail.nextElementSibling.innerHTML = "Email mora sadržati @!(primer:pera@gmail.com)";
         nizGreske.push("Email");
      }
      else{
@@ -271,7 +271,7 @@ else{
 function ProveraDatuma(){
     var poruka="<p class='text-danger d-flex'>"
     if(!RegExZaDatum.test(objDatum.value) && objDatum.value !=""){
-        objDatum.nextElementSibling.innerHTML = "Pogresan unos.Godina mora biti tekuca.";
+        objDatum.nextElementSibling.innerHTML = "Pogresan unos.Godina mora biti tekuća.";
     }
     else{
         objDatum.nextElementSibling.innerHTML ="";
@@ -318,7 +318,7 @@ function ProveraVremena(){
 function ProveraBrojaGostiju(){
     var poruka="<p class='text-danger d-flex'>"
     if(!RegExZaGoste.test(objGosti.value) && objGosti.value !=""){
-        objGosti.nextElementSibling.innerHTML = "Ne moze vise od 20 osoba.";
+        objGosti.nextElementSibling.innerHTML = "Ne može više od 20 osoba.";
         nizGreske.push("Gosti");
        
     }
