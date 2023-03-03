@@ -1,0 +1,51 @@
+[
+    {
+        "slika":"bootstrap-5.1.3-dist/assets/img/pexels-gilly-topicha-10779657.jpg",
+        "alt":"jelo Pica alpino",
+        "Naziv":"Pica alpino",
+        "sastojci":[
+            {"naziv":"Kozji sir"},
+            {"naziv":"persun"},
+            {"naziv":"pelat"}
+        ],
+        "cena":{
+            "stara":"1190",
+            "trenutna":"990"
+        }
+        
+    },
+    {
+        "slika":"bootstrap-5.1.3-dist/assets/img/pexels-engin-akyurt-2260200.jpg",
+        "alt":"jelo Pica alpino",
+        "Naziv":"Pica vezuvio",
+        "sastojci":
+           
+            [
+                {"naziv":"Kulen"},
+                {"naziv":"dimljena kobasica"},
+                {"naziv":"sir"},
+                {"naziv":"pelat"}
+             ],
+        "cena":{
+            "stara":"1180",
+            "trenutna":"990"
+        } 
+    },
+    {
+        "slika":"bootstrap-5.1.3-dist/assets/img/pexels-alberta-studios-10337724.jpg",
+        "alt":"jelo Pica alpino",
+        "Naziv":"Pica grekos",
+        "sastojci":
+           
+            [
+                {"naziv":"Masline"},
+                {"naziv":"Caciki sos"},
+                {"naziv":"persun"},
+                {"naziv":"pelat"}
+             ],
+        "cena":{
+            "stara":"1100",
+            "trenutna":"840"
+        } 
+    }
+]

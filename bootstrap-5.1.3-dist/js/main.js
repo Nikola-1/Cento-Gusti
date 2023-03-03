@@ -1,5 +1,5 @@
 window.onload = function(){
-    $(document).ready(function(){
+   /* $(document).ready(function(){
         $(".img-container:nth-child(1) ").animate({
            opacity:"100%"
                      
@@ -24,7 +24,7 @@ window.onload = function(){
             
          },900);
            
-     })
+     })*/  //Ne radi jqeury animate sa ajaxom
      
 }
 var url = window.location.pathname;
@@ -37,7 +37,7 @@ console.log(url);
 
 
 //Dinamicki napravljena galerija
-if(url == "/Cento-Gusti/galerija.html"){
+if(url == "/Cento-Gusti/galerija.html" || url=="/galerija.html"){
 var nizSlika =new Array("bootstrap-5.1.3-dist/assets/img/pexels-arthouse-studio-4344577.jpg","bootstrap-5.1.3-dist/assets/img/pexels-igor-starkov-914388.jpg","bootstrap-5.1.3-dist/assets/img/pexels-roman-odintsov-5902954.jpg","bootstrap-5.1.3-dist/assets/img/pexels-igor-starkov-1307698 (1).jpg","bootstrap-5.1.3-dist/assets/img/pexels-yelena-odintsova-10556713.jpg","bootstrap-5.1.3-dist/assets/img/pexels-volkan-vardar-6968828.jpg");
 var nizAlt = new Array("Unutrasnjošt restorana na zvezdari","Unutrašnjost restorana na vračaru","Pica na tanjiru ispred restorana","Unutrašnjost restorana na Dušanovcu","Spoljašnjost restorana na Novom Beogradu","Unutrašnjost restorana na novom Beogradu",);
 var Section1 =document.getElementById("section_1");
@@ -71,7 +71,7 @@ for(var i=4;i < 6;i++){
 
 
     //Dinamicka drop down lista
-    if(url =="/Cento-Gusti/rezervacija.html"){
+    if(url =="/Cento-Gusti/rezervacija.html" || url =="/rezervacija.html"){
     var Mesta =new Array("Vračar","Dušanovac","Zvezdara","Novi Beograd");
 var MestaValue=new Array("Vračar","Dušanovac","Zvezdara","Novi Beograd")
  
@@ -132,7 +132,7 @@ z.appendChild(selectTag);
 
 //Ispis 
 function proveraImena(){
-if(url== "/Cento-Gusti/index.html" || url== "/Cento-Gusti/" ){
+if(url== "/Cento-Gusti/index.html" || url== "/Cento-Gusti/" || url =="/index.html" ){
     var poruka="<p class='text-white d-flex'>"
     }
     else{
@@ -187,7 +187,7 @@ function ProveraMesta(){
     }
 }
 function ProveraPrezimena(){
-    if(url== "/Cento-Gusti/index.html" || url== "/Cento-Gusti/" ){
+    if(url== "/Cento-Gusti/index.html" || url== "/Cento-Gusti/" || url =="/index.html" ){
         var poruka="<p class='text-white d-flex'>"
         }
         else{
@@ -218,7 +218,7 @@ function ProveraPrezimena(){
 }
 function ProveraEmail(){
     
-    if(url== "/Cento-Gusti/index.html" || url== "/Cento-Gusti/" ){
+    if(url== "/Cento-Gusti/index.html" || url== "/Cento-Gusti/" || url =="/index.html" ){
         var poruka="<p class='text-white d-flex'>"
         }
         else{
@@ -339,7 +339,7 @@ function ProveraBrojaGostiju(){
 }
 
 function ProveraTekstualnogPolja(){
-    if(url== "/Cento-Gusti/index.html" || url== "/Cento-Gusti/" ){
+    if(url== "/Cento-Gusti/index.html" || url== "/Cento-Gusti/" || url =="/index.html" ){
         var poruka="<p class='text-white d-flex'>"
         }
         else{
@@ -357,7 +357,7 @@ function ProveraTekstualnogPolja(){
     }
 }
 
-if(url == "/Cento-Gusti/index.html" || url =="/Cento-Gusti/rezervacija.html" || url== "/Cento-Gusti/" ){
+if(url == "/Cento-Gusti/index.html" || url =="/Cento-Gusti/rezervacija.html" || url== "/Cento-Gusti/" || url =="/index.html" || url =="/rezervacija.html"){
     document.querySelector("#floatingInputIme").addEventListener("blur",proveraImena);
     if(url =="/Cento-Gusti/rezervacija.html"){
     document.querySelector("#DropLista").addEventListener("blur",ProveraMesta);
@@ -407,7 +407,7 @@ if(url == "/Cento-Gusti/index.html" || url =="/Cento-Gusti/rezervacija.html" || 
     
     
     //Obrada imena
-    if(url== "/Cento-Gusti/index.html" || url== "/Cento-Gusti/" ){
+    if(url== "/Cento-Gusti/index.html" || url== "/Cento-Gusti/"  ){
         var poruka="<p class='text-white d-flex'>"
         }
         else{
@@ -436,7 +436,7 @@ if(url == "/Cento-Gusti/index.html" || url =="/Cento-Gusti/rezervacija.html" || 
         nizPodaci.push(objIme.value);
     }
     
-if(url =="/Cento-Gusti/rezervacija.html"){
+if(url =="/Cento-Gusti/rezervacija.html"  ){
     //Obrada drop liste
     if(ObjMestoValue =="0"){
         poruka +="Morate izabrati mesto.";
@@ -500,7 +500,7 @@ if(url =="/Cento-Gusti/rezervacija.html"){
         document.querySelector("#ispis3").innerHTML="";
         nizPodaci.push(objEmail.value);
     }
-    if(url =="/Cento-Gusti/rezervacija.html"){
+    if(url =="/Cento-Gusti/rezervacija.html" || url =="/rezervacija.html"){
     //Obrada telefona
 
     

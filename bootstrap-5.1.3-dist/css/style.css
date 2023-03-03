@@ -43,13 +43,62 @@
     right: 0;
     bottom: 0
 }
-
+.drop_lista_labela{
+    font-family: 'Libre Baskerville', serif;
+    color: #BD5A42;
+    margin: 10px;
+}
+.drop_lista{
+    border-color: #BD5A42;
+    border:1px solid #BD5A42;
+    width:20%;
+    padding: 10px;
+    
+}
+.drop_lista:focus{
+    border:1px solid #BD5A42;
+}
+.flex-basis33 {
+    flex-basis: 33% !important;
+}
+.ChLabel{
+    color: #BD5A42;
+    font-family: 'Libre Baskerville', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Cekboks{
+    width: 30px;
+    height: 20px;
+    margin: 10px;
+   
+}
+.Cekboks1{
+    width: 30px;
+    height: 20px;
+    margin: 10px;
+   
+}
+.ChOmotoac{
+    border: 2px solid #BD5A42 !important;
+}
+.ChNaslov {
+    background: #BD5A42 !important;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0 !important;
+    height: 100%;
+}
 .img-container {
     display: flex;
     align-items: center;
     justify-content: center;
     margin: auto;
-    opacity:0%;
+    /*opacity: 0%; ne radi jquery sa ajaxom*/ 
 }
 
 .img-container img {
@@ -412,5 +461,18 @@ form-floating {
     .uvod-text {
         width: 80%;
         margin: auto
+    }
+    .drop_lista{
+        border-color: #BD5A42;
+        border:1px solid #BD5A42;
+        padding: 10px;
+        width:30%
+    }
+    .chVrsta{
+        width: 100%;
+    }
+    .CekOmotac{
+        width: 100%;
+        
     }
 }

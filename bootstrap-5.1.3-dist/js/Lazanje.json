@@ -1,0 +1,53 @@
+[
+    {
+        "slika":"bootstrap-5.1.3-dist/assets/img/Lazanja1.jpg",
+        "alt":"Jelo lazanja sa mesom",
+        "Naziv":"Lazanja sa mesom",
+        "sastojci":[
+            {"naziv":"Mleveno meso"},
+            {"naziv":"kačkavalj"},
+            {"naziv":"paradajz sos"},
+            {"naziv":"peršun"}
+        ],
+        "cena":{
+            "stara":"1190",
+            "trenutna":"990"
+        }
+        
+    },
+    {
+        "slika":"bootstrap-5.1.3-dist/assets/img/sheri-silver-q5C-_coAZR4-unsplash.jpg",
+        "alt":"Jelo lazanja sa sirom",
+        "Naziv":"Lazanja sa sirom",
+        "sastojci":
+           
+            [
+                {"naziv":"Makaroni"},
+                {"naziv":"Peperoni"},
+                {"naziv":"Sir"},
+                {"naziv":"pelat"},
+                {"naziv":"Peršun"}
+             ],
+        "cena":{
+            "stara":"1180",
+            "trenutna":"990"
+        } 
+    },
+    {
+        "slika":"bootstrap-5.1.3-dist/assets/img/pexels-alleksana-5949903.jpg",
+        "alt":"Jelo rimska lazanja ",
+        "Naziv":"Rimska lazanja",
+        "sastojci":
+           
+            [
+                {"naziv":"Pekorino"},
+                {"naziv":"Spanać"},
+                {"naziv":"peršun"},
+                {"naziv":"mleveno meso"}
+             ],
+        "cena":{
+            "stara":"1100",
+            "trenutna":"840"
+        } 
+    }
+]

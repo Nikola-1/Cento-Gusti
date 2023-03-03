@@ -1,0 +1,50 @@
+[
+    {
+        "slika":"bootstrap-5.1.3-dist/assets/img/pexels-engin-akyurt-1527603.jpg",
+        "alt":"jelo taljatele meksikana",
+        "Naziv":"Taljatele meksikana",
+        "sastojci":[
+            {"naziv":"Meksički pasulj"},
+            {"naziv":"čili papričica"},
+            {"naziv":"taljatele"}
+        ],
+        "cena":{
+            "stara":"1190",
+            "trenutna":"990"
+        }
+        
+    },
+    {
+        "slika":"bootstrap-5.1.3-dist/assets/img/pexels-engin-akyurt-1437267.jpg",
+        "alt":"jelo makaroni u sosu",
+        "Naziv":"Makaroni u sosu",
+        "sastojci":
+           
+            [
+                {"naziv":"Makaroni"},
+                {"naziv":"bolonjeze sos"}
+                
+             ],
+        "cena":{
+            "stara":"1180",
+            "trenutna":"990"
+        } 
+    },
+    {
+        "slika":"bootstrap-5.1.3-dist/assets/img/pexels-lgh-1256875.jpg",
+        "alt":"jelo testenina sa pestom",
+        "Naziv":"Testenina sa pestom",
+        "sastojci":
+           
+            [
+                {"naziv":"Taljatele"},
+                {"naziv":"Pesto sos"},
+                {"naziv":"persun"},
+                {"naziv":"sir"}
+             ],
+        "cena":{
+            "stara":"1100",
+            "trenutna":"840"
+        } 
+    }
+]
