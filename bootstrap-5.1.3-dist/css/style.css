@@ -469,10 +469,11 @@ form-floating {
         width:30%
     }
     .chVrsta{
-        width: 100%;
+        
+        margin: 0 !important;
     }
     .CekOmotac{
-        width: 100%;
+        width: 90%;
         
     }
 }

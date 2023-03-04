@@ -166,8 +166,9 @@ else{
 function ProveraMesta(){
     var ObjMesto = document.querySelector("#DropLista");
     var ObjMestoValue=ObjMesto.options[ObjMesto.selectedIndex].value;
-    var poruka="<p class='text-danger d-flex'>"
-    if(url =="/Cento-Gusti/rezervacija.html"){
+    
+    var poruka="<p class='text-danger d-flex'>";
+    if(url =="/Cento-Gusti/rezervacija.html" || url=="/rezervacija.html"){
         //Obrada drop liste
        
         if(ObjMestoValue =="0"){
@@ -359,12 +360,12 @@ function ProveraTekstualnogPolja(){
 
 if(url == "/Cento-Gusti/index.html" || url =="/Cento-Gusti/rezervacija.html" || url== "/Cento-Gusti/" || url =="/index.html" || url =="/rezervacija.html"){
     document.querySelector("#floatingInputIme").addEventListener("blur",proveraImena);
-    if(url =="/Cento-Gusti/rezervacija.html"){
+    if(url =="/Cento-Gusti/rezervacija.html" || url=="/rezervacija.html"){
     document.querySelector("#DropLista").addEventListener("blur",ProveraMesta);
 }
     document.querySelector("#floatingInputPrezime").addEventListener("blur",ProveraPrezimena);
     document.querySelector("#floatingInputEmail").addEventListener("blur",ProveraEmail);
-    if(url =="/Cento-Gusti/rezervacija.html"){
+    if(url =="/Cento-Gusti/rezervacija.html" || url=="/rezervacija.html"){
     document.querySelector("#floatingInputNumber").addEventListener("blur",ProveraTelefona);
     document.querySelector("#floatingInputDate").addEventListener("blur",ProveraDatuma);
     document.querySelector("#floatingInputTime").addEventListener("blur",ProveraVremena);
@@ -386,7 +387,7 @@ if(url == "/Cento-Gusti/index.html" || url =="/Cento-Gusti/rezervacija.html" || 
     objDatum =document.getElementById("floatingInputDate");
     objVreme=document.getElementById("floatingInputTime");
     objGosti=document.getElementById("floatingInputGuests");
-    if(  url =="/Cento-Gusti/rezervacija.html"){
+    if(  url =="/Cento-Gusti/rezervacija.html" || url=="/rezervacija.html"){
     ObjMesto = document.querySelector("#DropLista");
     var ObjMestoValue=ObjMesto.options[ObjMesto.selectedIndex].value;}
     nizGreske=[];
@@ -436,7 +437,7 @@ if(url == "/Cento-Gusti/index.html" || url =="/Cento-Gusti/rezervacija.html" || 
         nizPodaci.push(objIme.value);
     }
     
-if(url =="/Cento-Gusti/rezervacija.html"  ){
+if(url =="/Cento-Gusti/rezervacija.html" || url== "/rezervacija.html" ){
     //Obrada drop liste
     if(ObjMestoValue =="0"){
         poruka +="Morate izabrati mesto.";
