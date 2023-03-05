@@ -354,10 +354,7 @@ form-floating {
     opacity: 0.7;
     font-size: 18px;
 }
-.animacija{
-    
-    
-}
+
 @media (max-width:1920px) {
     .font-xl-size {
         font-size: 50px

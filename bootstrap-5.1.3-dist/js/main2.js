@@ -149,13 +149,14 @@ var nizJela=[];
                 sortiranje(SortVal,x);
                
             })
-            
+         
             $(document).on("change",".Cekboks",function(){
+                console.log(Jela);
                 var Jela = dohvatiIzLS("SvaJela");
                 Jela=filtriranje(Jela);
                 ispisJela(Jela);
                 $(document).on("change",".Cekboks1",function(){
-                    Jela1 =Jela
+                   
                    console.log(Jela);
                    Jela= Sortiranje(Jela,"Cekboks1");
                    
@@ -163,7 +164,13 @@ var nizJela=[];
                });
                 
             });
-           
+            $(document).on("change",".Cekboks1",function(){
+            
+                console.log(nizJela);
+                Jela= Sortiranje(nizJela,"Cekboks1");
+                
+                ispisJela(Jela);
+            });
             
         })
        // document.getElementById("search").addEventListener("blur",Pretraga);
@@ -254,7 +261,8 @@ var nizJela=[];
                 <img src="${obj.slika}" alt="${obj.alt}" class="img-fluid">
                 <h3>${obj.Naziv}</h3>
                 <p>${ispisSastojaka(obj.sastojci)}</p>
-                <a href="#" class="btn btn-lg dugmeBoja">${obj.cena.trenutna}</a>
+                <p class="h4 text-boja">${ispisCene(obj.cena)}</p>
+                <a href="#" class="btn btn-lg dugmeBoja">Dodaj u korpu</a>
               </div>`;
         }
         
@@ -262,7 +270,18 @@ var nizJela=[];
         ispis+=`</Div>`;
         document.getElementById("ispisJela").innerHTML=ispis;
 }
-
+function ispisCene(obj){
+    var ispis="";
+    
+        if(obj.stara != null){
+            ispis+=`<del>${obj.stara}din</del></br>${obj.trenutna}din`;
+        }
+        else{
+            ispis+=`${obj.trenutna}din`
+        }
+    
+    return ispis;
+}
 
     function ispisSastojaka(obj){
         var ispis="";
@@ -307,6 +326,7 @@ var nizJela=[];
 
 function Sortiranje(niz,ch){
     console.log(niz);
+    if(niz==undefined){console.log("undefined")}
     var novi = [];
     var val = $(`.${ch}:checked`).val();
     if(val == undefined){

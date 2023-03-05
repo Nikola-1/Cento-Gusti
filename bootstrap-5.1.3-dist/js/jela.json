@@ -13,7 +13,7 @@
             {"naziv":"pelat"}
         ],
         "cena":{
-            "stara":"1190",
+            "stara":null,
             "trenutna":"990"
         }
         
@@ -146,7 +146,7 @@
                     {"naziv":"Peršun"}
                  ],
             "cena":{
-                "stara":"",
+                "stara":null,
                 "trenutna":"1390"
             } 
         },
@@ -201,7 +201,7 @@
                         {"naziv":"orasi"}
                      ],
                 "cena":{
-                    "stara":"1180",
+                    "stara":null,
                     "trenutna":"890"
                 } 
             },

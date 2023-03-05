@@ -1,24 +1,24 @@
 window.onload = function(){
-   /* $(document).ready(function(){
-        $(".img-container:nth-child(1) ").animate({
+  /* $(document).ready(function(){
+        $(".meni").animate({
            opacity:"100%"
                      
            
         },500);
-        $(".img-container:nth-child(2) ").delay(900).animate({
-            opacity:"100%"
+        $(".meni ").delay(900).animate({
+            opacity:"100% !important"
                       
             
          },500);
 
-         $(".img-container:nth-child(3) ").delay(1400).animate({
+         $(".meni ").delay(1400).animate({
             opacity:"100%"
                       
             
          },3500);
 
          
-         $(".prvi-slajd ").delay(500).animate({
+         $(".meni ").delay(500).animate({
             opacity:"100%"
                       
             
