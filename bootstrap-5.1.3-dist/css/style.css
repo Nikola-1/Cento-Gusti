@@ -453,12 +453,13 @@ table tr:last-child td:first-child {
 }
 @media(max-width:1020px) {
     .tabela{
-        overflow-x: visible;
+        overflow: hidden;
+        overflow-x: visible !important;
     }
 }
 @media(max-width:920px) {
     .tabela{
-        overflow-x: visible;
+        overflow-x: visible ;
     }
     .carousel-item {
         height: 20rem
