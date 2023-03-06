@@ -386,6 +386,9 @@ table{
     padding: 10px;
     border-radius: 1px !important;
 }
+.tabela{
+    overflow-x:scroll ;
+}
 .table-rows td{
     border-left:none;
     border-right: none;
