@@ -2,7 +2,7 @@ $(document).ready(function() {
     let JelaUKorpi = getItemFromLocalStorage("JelaUKorpi");
 
     if(JelaUKorpi == 0){
-        showEmptyCart();
+        PraznaKorpa();
     }
     else{
         displayCartData();
@@ -34,8 +34,9 @@ function getItemFromLocalStorage(name){
 
 //funkcija za prikaz prazne korpe
 
-function showEmptyCart(){
-    $("#content").html("<h1>Korpa je prazna! </h1>");
+function PraznaKorpa(){
+    var html="<h1>Korpa je prazna! </h1>";
+    document.getElementById('poruka').innerHTML=html;
 }
 function displayCartData(){
     let productsFromCartLS = getItemFromLocalStorage("JelaUKorpi");
@@ -124,6 +125,11 @@ function ukupnaCena(){
                 console.log(ukupnaCena);
                 html+=`<p class="text-boja UkupnaCena">Ukupna cena:${ukupnaCena}din</p>`;
                 document.getElementById('ukupnaCena').innerHTML=html;
+                
+                if(JelaKorpa == 0){
+                    html=``;
+                    document.getElementById('ukupnaCena').innerHTML=html;
+                   }
             })
        
     

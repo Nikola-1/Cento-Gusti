@@ -434,6 +434,9 @@ table tr:last-child td:first-child {
         width: 40%;
         margin: auto
     }
+    .tabela{
+        overflow-x: hidden;
+    }
 }
 
 @media (max-width:1420px) {
@@ -448,8 +451,15 @@ table tr:last-child td:first-child {
         margin: auto
     }
 }
-
+@media(max-width:1020px) {
+    .tabela{
+        overflow-x: visible;
+    }
+}
 @media(max-width:920px) {
+    .tabela{
+        overflow-x: visible;
+    }
     .carousel-item {
         height: 20rem
     }
@@ -483,6 +493,7 @@ table tr:last-child td:first-child {
 }
 
 @media(max-width:580px) {
+    
     .carousel-item {
         height: 15rem
     }
