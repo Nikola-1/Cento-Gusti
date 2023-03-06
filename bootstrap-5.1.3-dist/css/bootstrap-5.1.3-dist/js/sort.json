@@ -1,0 +1,18 @@
+[
+    {
+        "naziv" : "cena-asc",
+        "vrednost" : "Cena po rastucem"
+    },
+    {
+        "naziv" : "cena-desc",
+        "vrednost" : "Cena po opadajucem"
+    },
+    {
+        "naziv" : "naziv-asc",
+        "vrednost" : "Naziv A-Z"
+    },
+    {
+        "naziv" : "naziv-desc",
+        "vrednost" : "Naziv Z-A"
+    }
+]

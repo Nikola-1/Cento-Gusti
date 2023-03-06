@@ -1,0 +1,18 @@
+[
+    {
+        "vrstaID":1,
+        "naziv":"Pica"
+    },
+    {
+        "vrstaID":2,
+        "naziv":"Testenina"
+    },
+    {
+        "vrstaID":3,
+        "naziv":"Lazanja"
+    },
+    {
+        "vrstaID":4,
+        "naziv":"Dezert"
+    }
+]
