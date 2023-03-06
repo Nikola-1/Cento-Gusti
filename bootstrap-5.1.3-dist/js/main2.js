@@ -1,23 +1,4 @@
-/*<Div class=" d-md-flex d-block w-100 m-auto col-12 red1">
-              <div class="img-container d-block h2boja text-center col-md-3 col-12">
-              <img src="bootstrap-5.1.3-dist/assets/img/pexels-gilly-topicha-10779657.jpg" alt="jelo Pica alpino" class="img-fluid">
-              <h3>Pica alpino</h3>
-              <p>Koziji sir,persun,pelat</p>
-              <a href="#" class="btn btn-lg dugmeBoja">990 din</a>
-            </div>
-            <div class="img-container d-block h2boja text-center col-md-3 col-12">
-                <img src="bootstrap-5.1.3-dist/assets/img/pexels-engin-akyurt-2260200.jpg" alt="jelo Pica vezuvio" class="img-fluid">
-                <h3>Pica vezuvio</h3>
-                <p>Kulen,dimljena kobasica,sir,pelat</p>
-                <a href="#" class="btn btn-lg dugmeBoja">980 din</a>
-              </div>
-              <div class="img-container d-block h2boja text-center col-md-3 col-12">
-                <img src="bootstrap-5.1.3-dist/assets/img/pexels-alberta-studios-10337724.jpg" alt="jelo Pica Grekos" class="img-fluid">
-                <h3>Pica grekos</h3>
-                <p>Masline,Caciki sos,persun,pelat.</p>
-                <a href="#" class="btn btn-lg dugmeBoja">840 din</a>
-              </div>
-          </Div>*/
+
 
     /*$.ajax({
         url:"bootstrap-5.1.3-dist/js/pice.json",
@@ -139,25 +120,16 @@ var nizJela=[];
                 sortiranje(SortVal,x);
                
             })*/
-            $(document).on("change","#VrsteDDL",function(){
-                var VrstaId=$('#VrsteDDL').val();
-                filtriranje(VrstaId,x);
-                
-            })
-            $(document).on("change","#Sort",function(){
-                var SortVal=$('#Sort').val();
-                sortiranje(SortVal,x);
-               
-            })
+           
          
             $(document).on("change",".Cekboks",function(){
-                console.log(Jela);
+                
                 var Jela = dohvatiIzLS("SvaJela");
                 Jela=filtriranje(Jela);
                 ispisJela(Jela);
                 $(document).on("change",".Cekboks1",function(){
                    
-                   console.log(Jela);
+                 
                    Jela= Sortiranje(Jela,"Cekboks1");
                    
                    ispisJela(Jela);
@@ -166,7 +138,7 @@ var nizJela=[];
             });
             $(document).on("change",".Cekboks1",function(){
             
-                console.log(nizJela);
+              
                 Jela= Sortiranje(nizJela,"Cekboks1");
                 
                 ispisJela(Jela);
@@ -194,11 +166,11 @@ var nizJela=[];
                 console.log(err)
             }
         });
-        
+        $('.dodaj-u-korpu').click(addToCart);
         
     }
 
-
+   
 
     function KreirajPadajucuListu(id,labela,niz,idListe){
         var ispis=`<label class="drop_lista_labela col-4 col-md-1 m-3">${labela}</label><select id=${idListe} class="drop_lista col-md-7 col-6"><option value=0>Izaberite...</option>`;
@@ -228,32 +200,15 @@ var nizJela=[];
         
         
     }
-   /* function ispisJela(niz,tip){
-            var ispis='<Div class=" d-md-flex d-block w-100 m-auto col-12 red1">';
-            for(var obj of niz){
-                ispis+=`<div class="img-container d-block h2boja text-center col-md-3 col-12">
-                <img src="${obj.slika}" alt="${obj.alt}" class="img-fluid">
-                <h3>${obj.Naziv}</h3>
-                <p>${ispisSastojaka(obj.sastojci)}</p>
-                <a href="#" class="btn btn-lg dugmeBoja">990 din</a>
-              </div>`
-            }
-            ispis+=" </Div>";
-            if(tip=="pica"){
-                document.getElementById("ispisPice").innerHTML=ispis;
-            }
-            if(tip=="testenina"){
-                document.getElementById("ispisTestenine").innerHTML=ispis;
-            }
-            if(tip=="lazanja"){
-                document.getElementById("ispisLazanje").innerHTML=ispis;
-            }
-            if(tip=="dezert"){
-                document.getElementById("ispisDezerta").innerHTML=ispis;
-            }
-    }*/
+
+
+
+    //<a href="#" class="btn btn-lg dugmeBoja dodaj-u-korpu" data-id=${obj.JeloID}>Dodaj u korpu</a>
+
+
+
     var ispisPice,ispisTestenine,ispisLazanje,ispisDezerti;
-    function ispisJela(niz,tip){
+    function ispisJela(niz){
         var ispis=`<Div class=" d-md-flex flex-wrap d-block w-100 m-auto col-12 red1">`;
         for(var obj of niz){
             
@@ -262,7 +217,8 @@ var nizJela=[];
                 <h3>${obj.Naziv}</h3>
                 <p>${ispisSastojaka(obj.sastojci)}</p>
                 <p class="h4 text-boja">${ispisCene(obj.cena)}</p>
-                <a href="#" class="btn btn-lg dugmeBoja">Dodaj u korpu</a>
+                
+               <input type="button" class="btn btn-lg dugmeBoja dodaj-u-korpu" data-id=${obj.JeloID} value="Dodaj u korpu"/>
               </div>`;
         }
         
@@ -270,6 +226,7 @@ var nizJela=[];
         ispis+=`</Div>`;
         document.getElementById("ispisJela").innerHTML=ispis;
 }
+
 function ispisCene(obj){
     var ispis="";
     
@@ -298,7 +255,7 @@ function ispisCene(obj){
             filtrirani.push(parseInt($(this).val()))
             
         })
-        console.log(filtrirani);
+      
         if(filtrirani.length !=0){
             return niz.filter(x=> filtrirani.includes(x.vrsta))
            
@@ -313,7 +270,7 @@ function ispisCene(obj){
     function provera(){
         var Jela = dohvatiIzLS("SvaJela");
         
-        console.log(Jela);
+        
         
         Jela=filtriranje(Jela);
         Jela= Sortiranje(Jela);
@@ -365,6 +322,5 @@ function Sortiranje(niz,ch){
       
     }
     console.log(val);
-    console.log(novi);
     return novi
 }

@@ -4,6 +4,7 @@
     {
         "JeloID":1,
         "vrsta":1,
+         "kolicina":0,
         "slika":"bootstrap-5.1.3-dist/assets/img/pexels-gilly-topicha-10779657.jpg",
         "alt":"jelo Pica alpino",
         "Naziv":"Pica alpino",
@@ -21,6 +22,7 @@
     {
         "JeloID":2,
         "vrsta":1,
+        "kolicina":0,
         "slika":"bootstrap-5.1.3-dist/assets/img/pexels-engin-akyurt-2260200.jpg",
         "alt":"jelo Pica alpino",
         "Naziv":"Pica vezuvio",
@@ -35,11 +37,12 @@
         "cena":{
             "stara":"1180",
             "trenutna":"990"
-        } 
+        }
     },
     {
         "JeloID":3,
         "vrsta":1,
+        "kolicina":0,
         "slika":"bootstrap-5.1.3-dist/assets/img/pexels-alberta-studios-10337724.jpg",
         "alt":"jelo Pica alpino",
         "Naziv":"Pica grekos",
@@ -54,12 +57,14 @@
         "cena":{
             "stara":"1100",
             "trenutna":"840"
-        } 
+        }
+        
     },
 
     {
         "JeloID":4,
         "vrsta":2,
+        "kolicina":0,
         "slika":"bootstrap-5.1.3-dist/assets/img/pexels-engin-akyurt-1527603.jpg",
         "alt":"jelo taljatele meksikana",
         "Naziv":"Taljatele meksikana",
@@ -77,6 +82,7 @@
     {
         "JeloID":5,
         "vrsta":2,
+        "kolicina":0,
         "slika":"bootstrap-5.1.3-dist/assets/img/pexels-engin-akyurt-1437267.jpg",
         "alt":"jelo makaroni u sosu",
         "Naziv":"Makaroni u sosu",
@@ -90,11 +96,12 @@
         "cena":{
             "stara":"1180",
             "trenutna":"990"
-        } 
+        }
     },
     {
         "JeloID":6,
         "vrsta":2,
+        "quantity":0,
         "slika":"bootstrap-5.1.3-dist/assets/img/pexels-lgh-1256875.jpg",
         "alt":"jelo testenina sa pestom",
         "Naziv":"Testenina sa pestom",
@@ -109,12 +116,13 @@
         "cena":{
             "stara":"1100",
             "trenutna":"840"
-        } 
+        }
     },
     
         {
             "JeloID":7,
             "vrsta":3,
+            "quantity":0,
             "slika":"bootstrap-5.1.3-dist/assets/img/Lazanja1.jpg",
             "alt":"Jelo lazanja sa mesom",
             "Naziv":"Lazanja sa mesom",
@@ -133,6 +141,7 @@
         {
             "JeloID":8,
             "vrsta":3,
+            "quantity":0,
             "slika":"bootstrap-5.1.3-dist/assets/img/sheri-silver-q5C-_coAZR4-unsplash.jpg",
             "alt":"Jelo lazanja sa sirom",
             "Naziv":"Lazanja sa sirom",
@@ -153,6 +162,7 @@
         {
             "JeloID":9,
             "vrsta":3,
+            "quantity":0,
             "slika":"bootstrap-5.1.3-dist/assets/img/pexels-alleksana-5949903.jpg",
             "alt":"Jelo rimska lazanja ",
             "Naziv":"Rimska lazanja",
@@ -173,6 +183,7 @@
             {
                 "JeloID":10,
                 "vrsta":4,
+                "quantity":0,
                 "slika":"bootstrap-5.1.3-dist/assets/img/Sladoled.jpg",
                 "alt":"Sladoled u čašici",
                 "Naziv":"Čokoladni sladoled",
@@ -189,6 +200,7 @@
             {
                 "JeloID":11,
                 "vrsta":4,
+                "quantity":0,
                 "slika":"bootstrap-5.1.3-dist/assets/img/kanoli.jpg",
                 "alt":"Poslastica Kanoli",
                 "Naziv":"Kanoli",
@@ -208,6 +220,7 @@
             {
                 "JeloID":12,
                 "vrsta":4,
+                "quantity":0,
                 "slika":"bootstrap-5.1.3-dist/assets/img/Tiramisu.jpg",
                 "alt":"Poslastica Tiramisu",
                 "Naziv":"Tiramisu",

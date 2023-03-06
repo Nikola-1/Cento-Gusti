@@ -12,7 +12,9 @@
 .resize-none {
     resize: none
 }
-
+.font-lg-size{
+    font-size: 20px ;
+}
 .shadow-box {
     box-shadow: 0 0 1px #000
 }
@@ -354,7 +356,73 @@ form-floating {
     opacity: 0.7;
     font-size: 18px;
 }
+.broj-proizvoda{
+   background-color: bisque;
+   font-size: 12px;
+   border-radius: 50%;
+   padding: 6px;
+   margin-top: -15px !important;
+   margin-left: -10px;
+   position: absolute;
+}
 
+.z-index{
+    z-index: 5;
+    right: 0;
+}
+.slika-korpa{
+    width: 150px;
+    height: 100px;
+}
+table{
+   width: 1000px ;
+    margin: auto;
+}
+.table-header th{
+    width: 300px;
+}
+.table-rows td{ 
+    border: 4px solid #BD5A42;
+    padding: 10px;
+    border-radius: 1px !important;
+}
+.table-rows td{
+    border-left:none;
+    border-right: none;
+}
+
+/*.table-rows td img{
+    height: 100px;
+}
+table tr:nth-child(2) td{
+    border-top: none !important;
+   
+}
+table tr:last-child td{
+    border-bottom: none !important;
+   
+}
+.table-rows td:first-child{
+    border-left: none !important;
+   
+}
+
+.table-rows td:last-child{
+    border-right: none !important;
+   
+}
+table tr:last-child td:first-child {
+    border: 2px solid orange;
+    border-bottom-right-radius: 10px;
+}*/
+.UkupnaCena{
+    /*background-color: bisque;*/
+    width: 350px !important;
+    margin: auto;
+    font-weight: bold;
+    margin-bottom: 30px;
+    font-size: 30px;
+}
 @media (max-width:1920px) {
     .font-xl-size {
         font-size: 50px
@@ -471,6 +539,11 @@ form-floating {
     }
     .CekOmotac{
         width: 90%;
+        
+    }
+    .UkupnaCena{
+        font-size: 15px;
+        width: 100px;
         
     }
 }

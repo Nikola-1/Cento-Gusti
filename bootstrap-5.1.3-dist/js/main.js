@@ -373,7 +373,7 @@ if(url == "/Cento-Gusti/index.html" || url =="/Cento-Gusti/rezervacija.html" || 
 }
     document.querySelector("#floatingTextarea3").addEventListener("blur",ProveraTekstualnogPolja);
     document.querySelector("#buttonRegEx").addEventListener("click",Provera);
-    document.querySelector("#buttonRegEx").addEventListener("click",modal);
+    //document.querySelector("#buttonRegEx").addEventListener("click",modal);
       function Provera(){
         //Promenljive
         var objPol,objIme,objPrezime,objEmail,objTekstualnoPolje,objTelefon,objDatum,objVreme,objGosti,ObjMesto,nizGreske,nizPodaci
@@ -644,20 +644,24 @@ console.log(nizPodaci);
 
 
 }
-function modal(){
-if(nizPodaci.length = 9 && (url =="/Cento-Gusti/rezervacija.html" || url== "/Cento-Gusti/index.html" || url== "/Cento-Gusti/")){
+$("#buttonRegEx").click(function modal(){
+    console.log(nizPodaci);
     const open=document.getElementById("buttonRegEx");
 const modal_container=document.getElementById("modal_container");
 const close = document.getElementById("close");
+if((nizPodaci.length > 4 && (url =="/index.html" || url== "/Cento-Gusti/index.html") || nizPodaci.length >= 9 &&( url== "/Cento-Gusti/rezervacija.html" || "/rezervacija.html"))){
 
-open.addEventListener('click',() => {
     modal_container.classList.add('show');
-});
 
-close.addEventListener('click',() => {
-    modal_container.classList.remove('show');
-});
+
+
+    
+
 }
-    }
+    });
+    $("#close").click(function (){
+        modal_container.classList.remove('show');
+    });
 }
 
+//modal_container.classList.remove('show');
