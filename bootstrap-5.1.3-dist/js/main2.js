@@ -94,7 +94,7 @@ var nizJela=[];
            dohvatiPodatke("bootstrap-5.1.3-dist/js/sort.json",function(z){
                 nizOpcija=z;
                 sacuvajLS("SveOpcije",nizOpcija);
-                kreirajChekBoxSort(nizOpcija,"chSort","Sortiraj");
+                kreirajRadioSort(nizOpcija,"chSort","Sortiraj");
             })
            /* dohvatiPodatke("kategorije.json",function(z){
                     nizKategorija=z;
@@ -172,25 +172,18 @@ var nizJela=[];
 
    
 
-    function KreirajPadajucuListu(id,labela,niz,idListe){
-        var ispis=`<label class="drop_lista_labela col-4 col-md-1 m-3">${labela}</label><select id=${idListe} class="drop_lista col-md-7 col-6"><option value=0>Izaberite...</option>`;
-        niz.forEach(el =>{
-            ispis+=`<option value="${el.vrstaID}">${el.naziv}</option>`;
-        });
-        ispis+=`</select>`
-        document.getElementById(`${id}`).innerHTML=ispis;
-    }
-    function kreirajChekBoxSort(niz,div,naslov){
+    
+    function kreirajRadioSort(niz,div,naslov){
         var ispis=`<div class='d-flex flex-column flex-lg-row w-100 ChOmotoac'><div><p class="ChNaslov p-1">${naslov}<p></div>`;
         niz.forEach(el=>{
-            ispis+=`<Div class="d-flex justify-content-start m-1"><input type="checkbox" class="Cekboks1" name="VrstaCH" value="${el.naziv}"><label class="ChLabel">${el.naziv}</label></Div>`
+            ispis+=`<Div class="d-flex justify-content-start m-1"><input type="radio" class="Cekboks1" name="VrstaCH" value="${el.naziv}"><label class="ChLabel">${el.vrednost}</label></Div>`
         })
         ispis+="</div>";
         document.getElementById(`${div}`).innerHTML=ispis;
         
         
     }
-    function kreirajChekBoxFilter(niz,div,naslov,klasa,val){
+    function kreirajChekBoxFilter(niz,div,naslov){
         var ispis=`<div class='d-flex flex-column flex-lg-row w-100 ChOmotoac'><div><p class="ChNaslov p-1">${naslov}<p></div>`;
         niz.forEach(el=>{
             ispis+=`<Div class="d-flex justify-content-start m-1"><input type="checkbox" class="Cekboks" name="VrstaCH" value="${el.vrstaID}"><label class="ChLabel">${el.naziv}</label></Div>`

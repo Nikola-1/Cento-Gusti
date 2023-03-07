@@ -35,6 +35,7 @@ function ubaciLS(data,naziv){
 //funkcija za dodavanje proizvoda u korpu
 function addToCart(){
     let id=$(this).data('id');
+   
     var JelaIzKorpe=UcitajIzLS('JelaUKorpi');
    
     if(JelaIzKorpe){
@@ -69,14 +70,16 @@ function addFirstItemToCart(){
     }
     //funkcija koja povecava kolicinu
     function updateQuantity(){
+        
         let JelaIzKorpe = dohvatiIzLS("JelaUKorpi");
         for(let i in JelaIzKorpe){
             if(JelaIzKorpe[i].id==id){
                 JelaIzKorpe[i].kolicina++;
                 break;
             }
+            
         }
-
+        
         ubaciLS(JelaIzKorpe,"JelaUKorpi");
     }
     //funkcija za dodavanje novog proizvoda u korpu koja vec ima neke proizvode

@@ -426,6 +426,20 @@ table tr:last-child td:first-child {
     margin-bottom: 30px;
     font-size: 30px;
 }
+.kolicinaJela{
+    border: none;
+    outline: none;
+}
+.dugme-smanji{
+   margin: 2px;
+   width: 20px;
+   border: none;
+   background-color: bisque;
+   color: #bd5a42;
+   font-weight: bold;
+   border-radius: 5px;
+}
+
 @media (max-width:1920px) {
     .font-xl-size {
         font-size: 50px
@@ -455,6 +469,11 @@ table tr:last-child td:first-child {
     .tabela{
         overflow: hidden;
         overflow-x: visible !important;
+    }
+}
+@media(max-width:1002px) {
+    .CekOmotoac{
+        width: 90% !important;
     }
 }
 @media(max-width:920px) {
@@ -490,6 +509,10 @@ table tr:last-child td:first-child {
     .uvod-text {
         width: 70%;
         margin: auto
+    }
+    .CekOmotac{
+        width: 90%;
+        
     }
 }
 

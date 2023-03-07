@@ -1,18 +1,18 @@
 [
     {
         "naziv" : "cena-asc",
-        "vrednost" : "Cena po rastucem"
+        "vrednost" : "Cena<i class='fas fa-arrow-up'></i>"
     },
     {
         "naziv" : "cena-desc",
-        "vrednost" : "Cena po opadajucem"
+        "vrednost" : "Cena<i class='fas fa-arrow-down'></i>"
     },
     {
         "naziv" : "naziv-asc",
-        "vrednost" : "Naziv A-Z"
+        "vrednost" : "Naziv <i class='fas fa-arrow-up'></i>"
     },
     {
         "naziv" : "naziv-desc",
-        "vrednost" : "Naziv Z-A"
+        "vrednost" : "Naziv <i class='fas fa-arrow-down'></i>"
     }
 ]

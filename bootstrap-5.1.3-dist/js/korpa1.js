@@ -40,7 +40,7 @@ function PraznaKorpa(){
 }
 function displayCartData(){
     let productsFromCartLS = getItemFromLocalStorage("JelaUKorpi");
-
+    
     dohvatiPodatke("bootstrap-5.1.3-dist/js/jela.json",function(data){
             let ProductsForDisplay = [];
             ProductsForDisplay = data.filter(p=>{
@@ -72,23 +72,41 @@ function generateTable(jela){
     
    
   `;
-  for(let j of jela){
-    html+=generateTr(j);
-  }
 
+  for(let j of jela){
+    
+     
+     
+    html+=generateTr(j);
+    
+
+  }
+  
  
   function generateTr(jela){
+    
     return `<tr class="table-rows">
    
     <td>${jela.Naziv}</td>
     <td><img src="${jela.slika}" class="img-fluid slika-korpa" ></td>
-    <td>${jela.kolicina}</td>
+    <td><input type="number" id="inputKolicina" class="kolicinaJela"  name="quantity" data-id="${jela.JeloID}" value="${jela.kolicina}" min="1" max="99" readonly><button id="povecaj" class="dugme-smanji">+</button><button id="smanji" class="dugme-smanji">-</button></td>
     <td>${jela.cena.trenutna * jela.kolicina}din</td>
     <td><input type="button" value="Izbrisi" onclick='removeFromCart(${jela.JeloID})'></td>
+    
   </tr>`;
+  
   }
+  
   html+=`</table>`;
+  
   document.getElementById('tabela').innerHTML=html;
+  
+  var brRedova=document.getElementsByClassName('table-rows').length;
+  console.log(brRedova);
+  if(brRedova == 0){
+    var praznaKorpa='<h1>Korpa je prazna!</h1>';
+    document.getElementById('tabela').innerHTML=praznaKorpa;
+  }
 }
 function removeFromCart(id){
  let jela = getItemFromLocalStorage("JelaUKorpi");
@@ -122,7 +140,7 @@ function ukupnaCena(){
                 for(var jelo of NizJelaUKorpi){
                     ukupnaCena+=jelo.cena.trenutna*jelo.kolicina;
                 }
-                console.log(ukupnaCena);
+                
                 html+=`<p class="text-boja UkupnaCena">Ukupna cena:${ukupnaCena}din</p>`;
                 document.getElementById('ukupnaCena').innerHTML=html;
                 
@@ -140,3 +158,89 @@ function ukupnaCena(){
 function dohvatiIzLS(naziv){
     return JSON.parse(localStorage.getItem(naziv))
 }
+
+
+$(document).on('change','#inputKolicina',function(){
+    var JelaIzKorpe=dohvatiIzLS('JelaUKorpi');
+})
+ function dohvatiKolicinu(){
+    var inputTag=$('input[name=inputKolicina]').val();
+   
+    
+    
+    return inputTag;
+}
+var br=0
+
+$(document).on('change',`#input${br++}`,function(){
+    console.log(dohvatiKolicinu());
+});
+//stavljam u niz sve inpute sa atributom name="quantity"
+var inputi=document.getElementsByName('quantity');
+console.log(inputi);
+
+$(document).on('click')
+
+
+var JelaUKorpi=dohvatiIzLS('JelaUKorpi');
+
+$(document).on('change','#inputKolicina',updateQuantity1);
+function updateQuantity1(){
+    let id=$(this).data('id');
+    let kolicina=$(this).val();
+    var jelaUkorpi=dohvatiIzLS('JelaUKorpi');
+    for(var i in jelaUkorpi){
+        if(jelaUkorpi[i].id==id){
+            jelaUkorpi[i].kolicina=parseInt(kolicina);
+            break;
+        }
+    }
+    ubaciLS(jelaUkorpi,"JelaUKorpi");
+    displayCartData();
+        
+    
+}
+//kod za dugme povecaj
+$(document).on('click','#povecaj',function(){
+    let id=$(this).prev().data('id');
+    let kolicina=$(this).prev().val();
+    var povecanje=++kolicina;
+    kolicina=$(this).prev().val(povecanje);
+   console.log(povecanje);
+    var jelaUkorpi=dohvatiIzLS('JelaUKorpi');
+    for(var i in jelaUkorpi){
+        
+        if(jelaUkorpi[i].id==id){
+            if(jelaUkorpi[i].kolicina !=99){
+                jelaUkorpi[i].kolicina=povecanje;
+                }
+            break;
+        }
+    }
+    ubaciLS(jelaUkorpi,"JelaUKorpi");
+    displayCartData();
+})
+
+//kod za dugme smanji
+$(document).on('click','#smanji',function(){
+    let id=$(this).prev().prev().data('id');
+    let kolicina=$(this).prev().prev().val();
+    var umanjenje=--kolicina;
+    kolicina=$(this).prev().prev().val(umanjenje);
+   
+    var jelaUkorpi=dohvatiIzLS('JelaUKorpi');
+    for(var i in jelaUkorpi){
+        
+        if(jelaUkorpi[i].id==id){
+            if(jelaUkorpi[i].kolicina !=1){
+            jelaUkorpi[i].kolicina=umanjenje;
+            }
+            break;
+        }
+    }
+    ubaciLS(jelaUkorpi,"JelaUKorpi");
+    displayCartData();
+    
+    
+})
+
