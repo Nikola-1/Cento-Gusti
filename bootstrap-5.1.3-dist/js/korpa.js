@@ -100,13 +100,13 @@ function UcitajIzLS(naziv){
 }
 
 function printCartLength(){
-    var productsFromLS = UcitajIzLS("JelaUKorpi");
+    var jelaIzLS = UcitajIzLS("JelaUKorpi");
 
     //console.log(productsFromLS)
-    if(productsFromLS != null){
-            let numberOfProducts = productsFromLS.length;
+    if(jelaIzLS != null){
+            let brojJela = jelaIzLS.length;
             
-           $('#broj-proizvoda').html(`${numberOfProducts}`);
+           $('#broj-proizvoda').html(`${brojJela}`);
     }
     else{
         ('#broj-proizvoda').html(`0 proizvoda`);

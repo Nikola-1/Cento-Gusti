@@ -628,6 +628,7 @@ if(url =="/Cento-Gusti/rezervacija.html" || url== "/rezervacija.html" ){
     document.querySelector("#ispis").innerHTML = poruka;
     
 }
+
 console.log(nizPodaci);
 
 

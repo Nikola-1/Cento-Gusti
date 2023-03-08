@@ -22,6 +22,7 @@
 .bg-brown {
     background-color: #bd5a42 !important
 }
+
 .prvi-slajd{
     opacity: 0%;
 }
@@ -332,7 +333,7 @@ form-floating {
     pointer-events: auto;
     opacity: 2;
     display: flex;
-    z-index: 2;
+    z-index: 6;
 }
  .dugmeModal{
     border-radius:50px ;
@@ -439,7 +440,29 @@ table tr:last-child td:first-child {
    font-weight: bold;
    border-radius: 5px;
 }
-
+.dugmePlacanje{
+    border: none ;
+    background-color: bisque;
+    padding: 20px;
+    width: 100px;
+    border-radius: 20px;
+    font-family:'Libre Baskerville', serif;
+    color: #BD5A42;
+    font-weight: bold;
+    cursor: pointer;
+    
+}
+.modalKorpa{
+    background-color: #fff;
+    width: 400px;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 100%;
+    text-align: center;
+    height: 500px;
+    overflow: hidden;
+    overflow: scroll;
+}
 @media (max-width:1920px) {
     .font-xl-size {
         font-size: 50px
