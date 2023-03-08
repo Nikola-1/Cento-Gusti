@@ -1,22 +1,31 @@
+
+
 $(document).ready(function() {
-    let JelaUKorpi = getItemFromLocalStorage("JelaUKorpi");
-    console.log(JelaUKorpi);
-    if(JelaUKorpi == 0 || JelaUKorpi == null){
+
+
+    let JelaUKorpi = dohvatiIzLS("JelaUKorpi");
+   
+            if(JelaUKorpi == 0 || JelaUKorpi == null){
         PraznaKorpa();
-        displayCartData();
-    }
-    else{
-        displayCartData();
-    }
-    var cena=0;
+        KorpaPodaci();
+       
+            }
+        else{
+            KorpaPodaci();
+            }
+
+   
     dohvatiPodatke("bootstrap-5.1.3-dist/js/jela.json",function(x){
         
       ukupnaCena(x);
       
     });
+
     ispisModala()
     ispisModala2()
 });
+
+
 
 function dohvatiPodatke(url,funk){
     $.ajax({
@@ -26,14 +35,15 @@ function dohvatiPodatke(url,funk){
         success:funk,
         error:function(err){
             console.log(err)
+
         }
     });
     
     
 }
 
-function getItemFromLocalStorage(name){
-    return JSON.parse(localStorage.getItem(name));
+function dohvatiIzLS(naziv){
+    return JSON.parse(localStorage.getItem(naziv));
 }
 
 //funkcija za prikaz prazne korpe
@@ -43,16 +53,16 @@ function PraznaKorpa(){
     document.getElementById('poruka').innerHTML=html;
    
 }
-function displayCartData(){
-    let productsFromCartLS = getItemFromLocalStorage("JelaUKorpi");
-    if(productsFromCartLS != null){
+function KorpaPodaci(){
+    let JelaIzLS = dohvatiIzLS("JelaUKorpi");
+    if(JelaIzLS != null){
     dohvatiPodatke("bootstrap-5.1.3-dist/js/jela.json",function(data){
-            let ProductsForDisplay = [];
+            let Jela = [];
            
-            ProductsForDisplay = data.filter(p=>{
-                for(let prod of productsFromCartLS){
-                    if(p.JeloID == prod.id){
-                        p.kolicina = prod.kolicina;
+            Jela = data.filter(j=>{
+                for(let jelo of JelaIzLS){
+                    if(j.JeloID == jelo.id){
+                        j.kolicina = jelo.kolicina;
                         return true;
                     }
                 }
@@ -61,8 +71,8 @@ function displayCartData(){
             });
         
         
-            console.log(ProductsForDisplay);
-            generateTable(ProductsForDisplay);
+            
+            generateTable(Jela);
             ukupnaCena(data);
     })
 }
@@ -82,7 +92,7 @@ function generateTable(jela){
     <tr class="table-header">
       <th>Naziv</th>
       <th>Slika</th>
-      <th>Kolicina</th>
+      <th>Količina</th>
       <th>Cena</th>
        
     </tr>
@@ -109,7 +119,7 @@ function generateTable(jela){
     <td><img src="${jela.slika}" class="img-fluid slika-korpa" ></td>
     <td><input type="number" id="inputKolicina" class="kolicinaJela"  name="quantity" data-id="${jela.JeloID}" value="${jela.kolicina}" min="1" max="99" readonly><button id="povecaj" class="dugme-smanji">+</button><button id="smanji" class="dugme-smanji">-</button></td>
     <td>${jela.cena.trenutna * jela.kolicina}din</td>
-    <td><input type="button" value="Izbrisi" onclick='removeFromCart(${jela.JeloID})'></td>
+    <td><input type="button" value="Izbriši" onclick='removeFromCart(${jela.JeloID})' class="dugme-brisi"></td>
     
   </tr>`;
   
@@ -120,7 +130,7 @@ function generateTable(jela){
   document.getElementById('tabela').innerHTML=html;
   
   var brRedova=document.getElementsByClassName('table-rows').length;
-  console.log(brRedova);
+  
   if(brRedova == 0){
     var praznaKorpa='';
     document.getElementById('tabela').innerHTML=praznaKorpa;
@@ -132,13 +142,13 @@ function generateTable(jela){
   }
 }
 function removeFromCart(id){
- let jela = getItemFromLocalStorage("JelaUKorpi");
+ let jela = dohvatiIzLS("JelaUKorpi");
  let NovaKorpa = jela.filter(j=> j.id !=id);
  
  localStorage.setItem("JelaUKorpi",JSON.stringify(NovaKorpa));
 
- displayCartData();
- printCartLength()
+ KorpaPodaci();
+ kolicinaUKorpi()
 }
 function ukupnaCena(){
        var html="";
@@ -201,11 +211,11 @@ $(document).on('change','#inputKolicina',function(){
 var br=0
 
 $(document).on('change',`#input${br++}`,function(){
-    console.log(dohvatiKolicinu());
+    
 });
 //stavljam u niz sve inpute sa atributom name="quantity"
 var inputi=document.getElementsByName('quantity');
-console.log(inputi);
+
 
 $(document).on('click')
 
@@ -224,7 +234,7 @@ function updateQuantity1(){
         }
     }
     ubaciLS(jelaUkorpi,"JelaUKorpi");
-    displayCartData();
+    KorpaPodaci();
         
     
 }
@@ -234,7 +244,7 @@ $(document).on('click','#povecaj',function(){
     let kolicina=$(this).prev().val();
     var povecanje=++kolicina;
     kolicina=$(this).prev().val(povecanje);
-   console.log(povecanje);
+   
     var jelaUkorpi=dohvatiIzLS('JelaUKorpi');
     for(var i in jelaUkorpi){
         
@@ -246,7 +256,7 @@ $(document).on('click','#povecaj',function(){
         }
     }
     ubaciLS(jelaUkorpi,"JelaUKorpi");
-    displayCartData();
+    KorpaPodaci();
 })
 
 //kod za dugme smanji
@@ -266,8 +276,9 @@ $(document).on('click','#smanji',function(){
             break;
         }
     }
+
     ubaciLS(jelaUkorpi,"JelaUKorpi");
-    displayCartData();
+    KorpaPodaci();
     
     
 })
@@ -282,7 +293,7 @@ function ukloniDugme(){
     var ispis="";
     document.getElementById('dugmePlacanje').innerHTML=ispis;
 }
-
+//funkcija za ispis modala za unos podataka
 function ispisModala(){
     var ispis=`<Div class="modalKorpa">
     <h2 class="text-boja ">Unesite podatke</h2>
@@ -348,6 +359,7 @@ function ispisModala(){
   
 }var nizPodaci=[];
 var nizGreske=[];
+
 function proveraImena(){
     var poruka="";
     var objIme=$('#floatingInputIme');
@@ -416,6 +428,7 @@ function proveraPrezimena(){
      
     }
 }
+
 function proveraGrada(){
     var poruka="";
     var objGrad=$('#floatingInputGrad');
@@ -440,14 +453,15 @@ function proveraGrada(){
         }
     }
 }
+
 function proveraAdrese(){
     var poruka="";
     var objAdresa=$('#floatingInputAdresa');
     var objAdresaVal =$('#floatingInputAdresa').val();
-    var RegExZaAdresu=/^[A-ZŽĐŠČĆ]{1}[a-zžđščć]{2,12}[1-9]{1,9}$/
+    var RegExZaAdresu=/^[A-ZŽĐŠČĆ]{1}[a-zžđščć]{2,12}\s[1-9]{1,9}$/
         
     if(!RegExZaAdresu.test(objAdresaVal) && objAdresaVal !=""){
-        objAdresa.next().html("Adresa mora poceti velikim slovom i sadrzati  cifru na kraju!");
+        objAdresa.next().html("Adresa mora poceti velikim slovom i sadrzati  cifru na kraju! Primer:Grocanska 12");
         if(!nizGreske.includes("adresa")){
             nizGreske.push("adresa");
            
@@ -478,6 +492,8 @@ function proveraAdrese(){
     }
     
 }
+
+
 function proveraPolja(){
    
    if( $('#radio1').is(':checked') || $('#radio2').is(':checked')){
@@ -494,6 +510,8 @@ function proveraPolja(){
     
    }
 }
+
+
 function provera(){
    console.log(nizPodaci);
     console.log(nizGreske);
@@ -513,6 +531,8 @@ function provera(){
     nizGreske=[];
 }
 
+
+
 $(document).on('click','#close',proveraImena);
 
 
@@ -525,6 +545,7 @@ $(document).on('click','#close',proveraGrada);
 $(document).on('click','#close',proveraAdrese);
 
 $(document).on('click','#close',proveraPolja);
+
 $(document).on('click','#close',provera);
 
 $(document).on('click','#placanje1',function(){
@@ -547,8 +568,8 @@ const close = document.getElementById("close");
             modal_container2.classList.remove('show');
         
         localStorage.removeItem('JelaUKorpi');
-        
-        displayCartData();
+        kolicinaUKorpi()
+        KorpaPodaci();
       
         
             });
@@ -559,15 +580,15 @@ const close = document.getElementById("close");
     });
     
 var dugme=document.getElementById('placanje');
-console.log(dugme);
 var modal_container2=document.getElementById("modal_container2");
 
 
 
+//funkcija za ispis modala za potvrdu porudzbine
 function ispisModala2(){
     
     var ispis=`<Div class="modal1">
-    <h2 class="text-white ">Uspešno ste porucili hranu!</h2>
+    <h2 class="text-white ">Uspešno ste poručili hranu!</h2>
     <button id="close1" class="dugmeModal">
      Zatvori
     </button>

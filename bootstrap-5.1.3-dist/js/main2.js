@@ -1,54 +1,6 @@
 
 
-    /*$.ajax({
-        url:"bootstrap-5.1.3-dist/js/pice.json",
-        method:"get",
-        dataType:'json',
-        success:function(data){
-            ispisJela(data,"pica");
-        },
-        error:function(err){
-            console.log(err);
-        }
-        
-    })
-    $.ajax({
-        url:"bootstrap-5.1.3-dist/js/Testenina.json",
-        method:"get",
-        dataType:'json',
-        success:function(data){
-            ispisJela(data,"testenina");
-        },
-        error:function(err){
-            console.log(err);
-        }
-        
-    })
-    $.ajax({
-        url:"bootstrap-5.1.3-dist/js/Lazanje.json",
-        method:"get",
-        dataType:'json',
-        success:function(data){
-            ispisJela(data,"lazanja");
-        },
-        error:function(err){
-            console.log(err);
-        }
-        
-    })
-    $.ajax({
-        url:"bootstrap-5.1.3-dist/js/Dezerti.json",
-        method:"get",
-        dataType:'json',
-        success:function(data){
-            ispisJela(data,"dezert");
-            
-        },
-        error:function(err){
-            console.log(err);
-        }
-        
-    })*/
+
     window.onload = function(){
         $(document).ready(function(){
             $(".img-container:nth-child(1) ").animate({
@@ -96,30 +48,7 @@ var nizJela=[];
                 sacuvajLS("SveOpcije",nizOpcija);
                 kreirajRadioSort(nizOpcija,"chSort","Sortiraj");
             })
-           /* dohvatiPodatke("kategorije.json",function(z){
-                    nizKategorija=z;
-                    ispisProizvoda(x)
-                    KreirajPadajucuListu('listaKategorije',"Kategorije",nizKategorija,"KategorijaDDL")
-                    
-                    
-            })*/
-            
            
-            /*$(document).on("change","#KategorijaDDL",function(){
-                var KatId=$('#KategorijaDDL').val();
-                filtriranje(KatId,"kat");
-                
-            })
-            $(document).on("change","#BrendovDDL",function(){
-                var KatId=$('#BrendovDDL').val();
-                filtriranje(KatId,"brend",x);
-                
-            })
-            $(document).on("change","#Sort",function(){
-                var SortVal=$('#Sort').val();
-                sortiranje(SortVal,x);
-               
-            })*/
            
          
             $(document).on("change",".Cekboks",function(){
@@ -145,7 +74,7 @@ var nizJela=[];
             });
             
         })
-       // document.getElementById("search").addEventListener("blur",Pretraga);
+      
     }
 
 
@@ -162,17 +91,42 @@ var nizJela=[];
             method:"get",
             dataType:"json",
             success:funk,
-            error:function(err){
-                console.log(err)
+            error:function(xhr,err){
+                var err = '';
+                if (xhr.status === 0) {
+                err = 'Not connect.\n Verify Network.';
+                } else if (xhr.status == 404) {
+                    err = 'Requested page not found. [404]';
+                } else if (xhr.status == 500) {
+                    err = 'Internal Server Error [500].';
+                } else if (exception === 'parsererror') {
+                    err = 'Requested JSON parse failed.';
+                } else if (exception === 'timeout') {
+                    err = 'Time out error.';
+                } else if (exception === 'abort') {
+                    err = 'Ajax request aborted.';
+                } else {
+                err = 'Uncaught Error.\n' + xhr.responseText;
+                }
+                greske(err);
             }
+            
         });
         $('.dodaj-u-korpu').click(addToCart);
         
     }
 
+    function greske(error){
+            var ispis="";
+            for(var err of error){
+                ispis+=`<li>${err}</li>`;
+            }
+            document.getElementById('errori').innerHTML=ispis;
+            
+    }
    
 
-    
+        //funkcija za kreiranje radio-buttona liste za sort
     function kreirajRadioSort(niz,div,naslov){
         var ispis=`<div class='d-flex flex-column flex-lg-row w-100 ChOmotoac'><div><p class="ChNaslov p-1">${naslov}<p></div>`;
         niz.forEach(el=>{
@@ -183,6 +137,7 @@ var nizJela=[];
         
         
     }
+    //funkcija za kreiranje checkbox liste za filtere
     function kreirajChekBoxFilter(niz,div,naslov){
         var ispis=`<div class='d-flex flex-column flex-lg-row w-100 ChOmotoac'><div><p class="ChNaslov p-1">${naslov}<p></div>`;
         niz.forEach(el=>{
@@ -196,7 +151,7 @@ var nizJela=[];
 
 
 
-    //<a href="#" class="btn btn-lg dugmeBoja dodaj-u-korpu" data-id=${obj.JeloID}>Dodaj u korpu</a>
+  
 
 
 
@@ -273,16 +228,13 @@ function ispisCene(obj){
     }
 
 
-
-function Sortiranje(niz,ch){
-    console.log(niz);
-    if(niz==undefined){console.log("undefined")}
+function Sortiranje(niz,rb){
+    
+    //novi niz u koji smestamo jela
     var novi = [];
-    var val = $(`.${ch}:checked`).val();
-    if(val == undefined){
-        novi = niz
-    }
-    else{
+    var val = $(`.${rb}:checked`).val();
+    
+   
         
         novi=niz.sort(function(a,b){
             if(val == "cena-asc"){
@@ -313,7 +265,7 @@ function Sortiranje(niz,ch){
            
         })
       
-    }
+    
     console.log(val);
     return novi
 }

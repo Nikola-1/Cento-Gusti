@@ -5,7 +5,7 @@ $(document).ready(function (){
            
     });
    //ispis broja jela u korpi
-        printCartLength();
+   kolicinaUKorpi();
 });
 console.log(nizJela);
 function dohvatiPodatke(fajl,funk){
@@ -24,7 +24,7 @@ function dohvatiPodatke(fajl,funk){
 function ubaciLS(data,naziv){
     localStorage.setItem(naziv,JSON.stringify(data));
 }
-//funkcija za ucitavanje proizvoda
+
 
     
        
@@ -32,7 +32,7 @@ function ubaciLS(data,naziv){
     
     $(document).on('click',".dodaj-u-korpu",addToCart)
 
-//funkcija za dodavanje proizvoda u korpu
+
 function addToCart(){
     let id=$(this).data('id');
    
@@ -40,20 +40,20 @@ function addToCart(){
    
     if(JelaIzKorpe){
         if(JeloSeNalaziUKorpi()){
-            updateQuantity();
+            updateKolicina();
             
         }
         else{
-            addToLocalStorage();
-            printCartLength();
+            dodajJelouLS();
+            kolicinaUKorpi();
         }
     }
     else{
         addFirstItemToCart();
-        printCartLength();
+        kolicinaUKorpi();
     }
 
-//funkcija za dodavanje prvog proizvoda u korpu
+
 function addFirstItemToCart(){
     let Jela =[];
     Jela[0]={
@@ -63,13 +63,13 @@ function addFirstItemToCart(){
     ubaciLS(Jela,"JelaUKorpi");
 }
 
-// funkcija koja proverava da li proizvod vec postoji u korpi
+
 
     function JeloSeNalaziUKorpi(){
         return JelaIzKorpe.filter(x=>x.id == id).length;
     }
     //funkcija koja povecava kolicinu
-    function updateQuantity(){
+    function updateKolicina(){
         
         let JelaIzKorpe = dohvatiIzLS("JelaUKorpi");
         for(let i in JelaIzKorpe){
@@ -82,9 +82,9 @@ function addFirstItemToCart(){
         
         ubaciLS(JelaIzKorpe,"JelaUKorpi");
     }
-    //funkcija za dodavanje novog proizvoda u korpu koja vec ima neke proizvode
+   
 
-    function addToLocalStorage(){
+    function dodajJelouLS(){
         let JelaIzLS =UcitajIzLS('JelaUKorpi');
         JelaIzLS.push({
             "id":id,
@@ -99,16 +99,17 @@ function UcitajIzLS(naziv){
     return JSON.parse(localStorage.getItem(naziv));
 }
 
-function printCartLength(){
+function kolicinaUKorpi(){
     var jelaIzLS = UcitajIzLS("JelaUKorpi");
 
-    //console.log(productsFromLS)
+    
     if(jelaIzLS != null){
             let brojJela = jelaIzLS.length;
+            document.getElementById('broj-jela').innerHTML=`${brojJela}`;
             
-           $('#broj-proizvoda').html(`${brojJela}`);
+           
     }
     else{
-        ('#broj-proizvoda').html(`0 proizvoda`);
+        document.getElementById("broj-jela").innerHTML="0";
     }
 }
