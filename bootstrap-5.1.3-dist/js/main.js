@@ -272,7 +272,7 @@ else{
 function ProveraDatuma(){
     var poruka="<p class='text-danger d-flex'>"
     if(!RegExZaDatum.test(objDatum.value) && objDatum.value !=""){
-        objDatum.nextElementSibling.innerHTML = "Pogresan unos.Godina mora biti tekuća.";
+        objDatum.nextElementSibling.innerHTML = "Pogresan unos.Godina mora biti tekuća.Primer: 20/12/2022";
     }
     else{
         objDatum.nextElementSibling.innerHTML ="";
