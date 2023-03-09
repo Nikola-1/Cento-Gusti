@@ -190,10 +190,12 @@ function ispisCene(obj){
 
     function ispisSastojaka(obj){
         var ispis="";
+        var noviIspis="";
         for(var sastojak of obj){
            ispis+=`${sastojak.naziv},`;
+             noviIspis=ispis.substring(0,ispis.length-1);
         }
-        return ispis;
+        return noviIspis;
     }
     var dugmad=document.getElementsByName('VrstaCH');
     
