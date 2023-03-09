@@ -1,5 +1,5 @@
 $(document).ready(function (){
-    dohvatiPodatke('jela.json',function(x){
+    dohvatiPodatke('./jela.json',function(x){
             console.log(x);
             ubaciLS(x,"Jela");
            
