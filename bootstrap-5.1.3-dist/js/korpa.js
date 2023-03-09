@@ -105,7 +105,7 @@ function kolicinaUKorpi(){
     
     if(jelaIzLS != null){
             let brojJela = jelaIzLS.length;
-            document.getElementById('broj-jela').innerHTML=`${brojJela}`;
+            document.getElementById('broj-jela').innerHTML=brojJela;
             
            
     }
