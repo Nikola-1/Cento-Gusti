@@ -61,9 +61,7 @@
 .drop_lista:focus{
     border:1px solid #BD5A42;
 }
-.flex-basis33 {
-    flex-basis: 33% !important;
-}
+
 .ChLabel{
     color: #BD5A42;
     font-family: 'Libre Baskerville', serif;
