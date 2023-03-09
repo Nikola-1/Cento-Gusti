@@ -15,7 +15,7 @@ $(document).ready(function() {
             }
 
    
-    dohvatiPodatke("./js/jela.json",function(x){
+    dohvatiPodatke("./bootstrap-5.1.3-dist/js/jela.json",function(x){
         
       ukupnaCena(x);
       
@@ -77,7 +77,7 @@ function PraznaKorpa(){
 function KorpaPodaci(){
     let JelaIzLS = dohvatiIzLS("JelaUKorpi");
     if(JelaIzLS != null){
-    dohvatiPodatke("./js/jela.json",function(data){
+    dohvatiPodatke("./bootstrap-5.1.3-dist/js/jela.json",function(data){
             let Jela = [];
            
             Jela = data.filter(j=>{
@@ -177,7 +177,7 @@ function ukupnaCena(){
         var JelaKorpa=dohvatiIzLS('JelaUKorpi');
        
         if(JelaKorpa !=null){
-            dohvatiPodatke("./js/jela.json",function(data){
+            dohvatiPodatke("./bootstrap-5.1.3-dist/js/jela.json",function(data){
                 
                 var NizJelaUKorpi=[];
                 
