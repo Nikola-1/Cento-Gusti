@@ -33,17 +33,17 @@
 var nizJela=[];
     window.onload=function(){
    
-        dohvatiPodatke("Cento-Gusti/bootstrap-5.1.3-dist/js/jela.json",function(x){
+        dohvatiPodatke("bootstrap-5.1.3-dist/js/jela.json",function(x){
             nizJela=x;
             sacuvajLS("SvaJela",nizJela);
-            dohvatiPodatke("Cento-Gusti/bootstrap-5.1.3-dist/js/vrsta.json",function(y){
+            dohvatiPodatke("bootstrap-5.1.3-dist/js/vrsta.json",function(y){
                 nizVrsta=y;
                 sacuvajLS("SveVrste",nizVrsta);
                 ispisJela(x,"pica");
                 
                 kreirajChekBoxFilter(nizVrsta,"chVrsta","Filtriraj");
             })
-           dohvatiPodatke("Cento-Gusti/bootstrap-5.1.3-dist/js/sort.json",function(z){
+           dohvatiPodatke("bootstrap-5.1.3-dist/js/sort.json",function(z){
                 nizOpcija=z;
                 sacuvajLS("SveOpcije",nizOpcija);
                 kreirajRadioSort(nizOpcija,"chSort","Sortiraj");
