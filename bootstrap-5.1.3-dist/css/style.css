@@ -101,6 +101,7 @@
     align-items: center;
     justify-content: center;
     margin: auto;
+    height: 450px;
     /*opacity: 0%; ne radi jquery sa ajaxom*/ 
 }
 
@@ -614,5 +615,8 @@ table tr:last-child td:first-child {
         font-size: 15px;
         width: fit-content !important;
         
+    }
+    .img-container{
+        height: 400px;
     }
 }
