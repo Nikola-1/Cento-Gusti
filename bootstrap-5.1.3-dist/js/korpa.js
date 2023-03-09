@@ -14,10 +14,34 @@ function dohvatiPodatke(fajl,funk){
         method:"get",
         dataType:"json",
         success:funk,
-        error:function(err){
-            console.log(err);
+        error:function(xhr,err){
+            var err = '';
+            if (xhr.status === 0) {
+            err = 'Not connect.\n Verify Network.';
+            } else if (xhr.status == 404) {
+                err = 'Requested page not found. [404]';
+            } else if (xhr.status == 500) {
+                err = 'Internal Server Error [500].';
+            } else if (exception === 'parsererror') {
+                err = 'Requested JSON parse failed.';
+            } else if (exception === 'timeout') {
+                err = 'Time out error.';
+            } else if (exception === 'abort') {
+                err = 'Ajax request aborted.';
+            } else {
+            err = 'Uncaught Error.\n' + xhr.responseText;
+            }
+            greske(err);
         }
     })
+}
+function greske(error){
+    var ispis="";
+    for(var err of error){
+        ispis+=`<li>${err}</li>`;
+    }
+    document.getElementById('errori').innerHTML=ispis;
+    
 }
 //funkcija za skladistenje podataka u local storage
 
