@@ -1,5 +1,5 @@
 $(document).ready(function (){
-    dohvatiPodatke('../bootstrap-5.1.3-dist/js/jela.json',function(x){
+    dohvatiPodatke('./bootstrap-5.1.3-dist/js/jela.json',function(x){
             console.log(x);
             ubaciLS(x,"Jela");
            
