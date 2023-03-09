@@ -37,9 +37,9 @@ function dohvatiPodatke(fajl,funk){
 }
 function greske(error){
     var ispis="";
-    for(var err of error){
-        ispis+=`<li>${err}</li>`;
-    }
+    
+        ispis+=`<li>${error}</li>`;
+    
     document.getElementById('errori').innerHTML=ispis;
     
 }
