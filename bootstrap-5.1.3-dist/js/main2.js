@@ -33,7 +33,7 @@
 var nizJela=[];
     window.onload=function(){
    
-        dohvatiPodatke("./jela.json",function(x){
+        dohvatiPodatke("./js/jela.json",function(x){
             nizJela=x;
             sacuvajLS("SvaJela",nizJela);
             dohvatiPodatke("vrsta.json",function(y){
