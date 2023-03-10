@@ -317,6 +317,7 @@ function ukloniDugme(){
 //funkcija za ispis modala za unos podataka
 function ispisModala(){
     var ispis=`<Div class="modalKorpa">
+    <div class="d-flex flex-end flex-row-reverse"><a href="#" id="close2" class="text-black">zatvori</a></div>
     <h2 class="text-boja ">Unesite podatke</h2>
     <form id="MyForm" name="Rezervacija" class="d-flex flex-column w-100"/>
 
@@ -578,7 +579,9 @@ const close = document.getElementById("close");
 
     modal_container.classList.add('show');
 
-
+$(document).on('click',"#close2",function(){
+    modal_container.classList.remove('show');
+})
     $(document).on('click','#close1',function(){
            
         
